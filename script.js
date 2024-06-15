@@ -2036,9 +2036,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("YorzaN");
 
-  const styleManager = document.createElement("style");
-  styleManager.type = "text/css";
-  styleManager.appendChild(document.createTextNode(cssCode));
-
-  document.head.appendChild(styleManager);
+  const styleElement = document.createElement("style");
+  styleElement.innerHTML = cssCode;
+  document.head.appendChild(styleElement);
 });
