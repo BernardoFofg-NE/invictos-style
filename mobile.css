@@ -3649,5 +3649,36 @@ td.slip_sel_col_clear {
   font-family: "FontAwesome";
   margin-left: 6px;
 }
+}
 
+#fe_body .scroll_up_btn.btn_general {
+  margin: 16px 0px;
+  background: var(--main_color);
+  height: 40px;
+  color: transparent;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+#fe_body .scroll_up_btn.btn_general::after {
+  content: "\f062";
+  font-family: "FontAwesome";
+  font-size: 14px;
+  color: var(--primary_white);
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#fe_body .scroll_up_btn.btn_general::before {
+  content: "Voltar para o início";
+  display: block;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
 }
