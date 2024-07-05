@@ -164,7 +164,7 @@ body.portable-device #fe_main {
 }
 
 body.portable-device.skin-120 #reg_user_form .registration_tbl, .skin-120 .registration_tbl {
-  border-color: var(--main_dark_color)
+   padding: 16px 8px;
 }
 
 body#fe_body, body.portable-device #reg_user_form .registration_tbl {
@@ -3135,18 +3135,27 @@ body#fe_body.inbox-message-center #cboxClose {
 }
 
 .cpf-input {
-  height: 44px !important;
-  line-height: 44px;
-  background: var(--input_select_bg) !important;
+  background: var(--secondary_white) !important;
 }
 
 .cpf-input::placeholder {
   color: #c9c9c9 !important;
 }
 
+div.pass_icon:before, div.mail_icon:before, div.usr_nm:before, div.usr_nm:before, span.dt_icon:before {
+  margin-top: 2px;
+  filter: brightness(0.5);
+  border: 0px;
+}
+
 .usr_nm.keep-in-line {
-  background: var(--input_select_bg) !important;
+  background: var(--secondary_white) !important;
   border-radius: 8px !important;
+}
+
+.chk_bx_cnt{
+  color: var(--main_dark_gray);
+  font-size: 12px;
 }
 
 div.usr_nm.keep-in-line:before {
@@ -3158,7 +3167,7 @@ div.usr_nm.keep-in-line:before {
   input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
     [type="button"]
   ):not([type="reset"]):not([type="file"]) {
-  border-radius: 8px;
+  border-radius: 8px !important;
 }
 
 .login_menu_area_v2 .balance_btns_holder .right_menu_btn_container .balance_icon_container, .login_menu_area_v2 .balance_btns_holder .right_menu_btn_container .bets_icon_container {
@@ -3681,4 +3690,48 @@ td.slip_sel_col_clear {
   font-weight: 600;
   text-align: center;
   text-transform: none;
+}
+
+/*Registro*/
+.registration-page {
+.registration_container {
+  margin: 0px;
+}
+  
+  #fe_main:not(:has(.digitain_outer_wrapper)) .reg_v11 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):disabled, select:disabled, textarea:disabled, #fe_main:not(:has(.digitain_outer_wrapper)) .reg_v11 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):read-only {
+    background: var(--secondary_white)
+  }
+
+        #fe_main button.reg_btn {
+          border-radius: 8px;
+          background: var(--primary_color)
+      }
+
+    #fe_main button.reg_btn:hover {
+        opacity: 0.7;
+        background: var(--primary_color)
+    }
+
+    .registration_tbl td.reg_field_button.submit_button_area {
+        padding: 0px 20px;
+    }
+
+      .chk_bx_cnt, .chk_bx a, .chk_bx div {
+        color: var(--main_dark_gray);
+    }
+
+  .checkmark2 {
+        border-radius: 4px;
+        border: 1px solid var(--primary_color);
+        background: var(--primary_white);
+        display: flex;
+        justify-content: center;
+    }
+
+  .checkmark2:before {
+        content: '\f00c';
+        font-family: "FontAwesome";
+        font-size: 14px;
+        color: white;
+    }
 }

@@ -138,6 +138,7 @@
           background-color: var(--secondary_white);
           border: 1px solid transparent;
           color: var(--main_dark_gray);
+          border-radius: 8px;
       }
       #bs_contentarea.centered_contentarea .fields_container {
           margin-bottom: 0px;
@@ -2768,4 +2769,87 @@ right: 12px;
     display: flex;
     justify-content: center;
 }
+}
+
+
+/* Registro */
+
+.registration-page {
+    #reg_user_form .registration_tbl, .registration_tbl td{
+        background: var(--primary_white);
+        color: var(--main_dark_gray);
+        border: none;
+    }
+
+    .registration_tbl td {
+        padding: 4px;
+    }
+
+    .registration_tbl span.reg_ttl2 {
+        color: var(--main_dark_gray)
+    }
+    .registration_tbl tr:first-child, .registration_title_wrapper {
+        border: none;
+        background: transparent;
+    }
+
+    .registration_tbl tr:nth-child(6),  .registration_tbl tr:nth-child(5), #fe_main .registration_container p.password_tooltip {
+        display: none
+    }
+
+    div.pass_icon:before, div.mail_icon:before, div.usr_nm:before, div.usr_nm:before, span.dt_icon:before {
+        filter: brightness(0.5);
+        margin: 0px;
+    }
+
+    .chk_bx_cnt, .chk_bx a, .chk_bx div {
+        color: var(--main_dark_gray);
+    }
+
+  .checkmark2 {
+        border-radius: 4px;
+        border: 1px solid var(--primary_color);
+        background: var(--primary_white);
+        display: flex;
+        justify-content: center;
+    }
+
+  .checkmark2:before {
+        content: '\f00c';
+        font-family: "FontAwesome";
+        font-size: 14px;
+        color: white;
+    }
+
+    .chk_bx_cnt input:checked ~ .checkmark2 {
+        background: var(--primary_color);
+    }
+
+
+    #reg_user_form .registration_tbl tbody:first-child {
+        display: contents !important;
+    }
+    .registration_tbl tr {
+        display: flex;
+        flex-direction: column;
+        widtH: 100%;
+    }
+
+    .registration_tbl table {
+        width: 100%;
+    }
+
+      #fe_main button.reg_btn {
+          border-radius: 8px;
+          background: var(--primary_color)
+      }
+
+    #fe_main button.reg_btn:hover {
+        opacity: 0.7;
+        background: var(--primary_color)
+    }
+
+    .registration_tbl td.reg_field_button.submit_button_area {
+        padding: 0px 20px;
+    }
 }
