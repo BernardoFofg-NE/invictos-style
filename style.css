@@ -2040,7 +2040,6 @@ body.wide .league_events_wrapper {
     #sports_menu .the_menu li.tm_l > a:hover,
     #sports_menu .the_menu li.tm_l > a:visited {
     padding-left: 50px;
-    color: var(--primary_txt_color);
     /* text-transform: uppercase; */
     line-height: 21px;
     margin: 0 0;
