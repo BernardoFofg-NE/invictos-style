@@ -8,7 +8,7 @@
   --primary_white: #fff;
   --secondary_white: #f9f3f3;
 
-  --main_green: #4DAA57;
+  --main_green: #4daa57;
 
   --selectOdd: #52b86a;
   --login_button_bg: #232423;
@@ -20,7 +20,7 @@
   --main_black: #000000;
   --main_gray: #515151;
   --main_dark_gray: #3f4251;
-  --main_light_gray: rgb(0,0,0, .10);
+  --main_light_gray: rgb(0, 0, 0, 0.1);
 
   --button-gradient: linear-gradient(
     180deg,
@@ -66,70 +66,3289 @@
   padding-top: 61px !important;
 }
 
-#fe_header {
-  background: var(--main_color);
-  height: 61px;
-}
+/* Global*/
+#fe_body {
+  #fe_header {
+    background: var(--main_color);
+    height: 61px;
+  }
 
-.mob_header {
-  height: 61px;
-  background: transparent;
-  gap: 2px;
-  padding: 4px 7px;
-}
+  .mob_header {
+    height: 61px;
+    background: transparent;
+    gap: 2px;
+    padding: 4px 7px;
+  }
 
-.log_reg_sec a {
-  padding: 0px;
-  justify-content: center;
-  border-radius: 0px;
-  width: 70px;
-  font-size: 0;
-  position: relative;
-  z-index: 1;
-  height: 40px;
-  background-color: transparent;
-}
+  .log_reg_sec a {
+    padding: 0px;
+    justify-content: center;
+    border-radius: 0px;
+    width: 70px;
+    font-size: 0;
+    position: relative;
+    z-index: 1;
+    height: 40px;
+    background-color: transparent;
+  }
 
-.mob_header .logo_area .logo a {
-  background-image: url(/uploads/files/invictos-logo-mobile-png-6671dabf542f0.png) !important;
-  padding: 0px !important;
-}
+  .mob_header .logo_area .logo a {
+    background-image: url(/uploads/files/invictos-logo-mobile-png-6671dabf542f0.png) !important;
+    padding: 0px !important;
+  }
 
-.log_reg_sec a:first-child {
-  width: 80px;
-  margin: 0px;
-  border: 1px solid;
-  border-radius: 16px;
-}
+  .log_reg_sec a:first-child {
+    width: 80px;
+    margin: 0px;
+    border: 1px solid;
+    border-radius: 16px;
+  }
 
-.log_reg_sec a:last-child {
-  width: 80px;
-}
+  .log_reg_sec a:last-child {
+    width: 80px;
+  }
 
-.log_reg_sec a::before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 98px;
-  /* content: ""; */
-  font-size: 13px;
-  z-index: -1;
-}
+  .inner,
+  #fe_main {
+    background: var(--secondary_white);
+  }
 
-.inner,
-#fe_main {
-  background: var(--secondary_white);
-}
-
-body.portable-device #fe_main {
+  .portable-device #fe_main {
     background: var(--primary_white);
+  }
+
+  .mob_header.logged-out {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .main_menu {
+    background-color: transparent;
+  }
+
+  .mob_header .logo_area {
+    height: auto;
+  }
+
+  .mob_header .log_reg_sec {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: row-reverse;
+  }
+
+  .mob_header .log_reg_sec a {
+    text-transform: initial;
+    box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
+      0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02),
+      0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
+      0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
+      0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.14);
+  }
+
+  #reg_user_form .registration_tbl,
+  .skin-120 .registration_tbl {
+    padding: 16px 8px;
+  }
+
+  #reg_user_form .registration_tbl {
+    background: var(--primary_white);
+  }
+
+  .scroll_up_btn.btn_general {
+    margin: 16px 0px;
+    background: var(--main_color);
+    height: 40px;
+    color: transparent;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .scroll_up_btn.btn_general::after {
+    content: "\f062";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    color: var(--primary_white);
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .scroll_up_btn.btn_general::before {
+    content: "Voltar para o início";
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+  }
+
+  #fe_web_container #fe_main div.usr_nm input,
+  #fe_web_container
+    #fe_main
+    .registration_container
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]).datepicker,
+  #fe_web_container
+    #fe_main
+    .registration_container.reg_v10
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]).datepicker,
+  #fe_main
+    .registration_container
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]),
+  select,
+  textarea {
+    margin: 0px;
+    background: var(--secondary_white);
+    border-radius: 8px !important;
+    border: 0px;
+    color: var(--main_dark_gray);
+    padding-left: 38px !important;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .chk_bx a,
+  .chk_bx div {
+    color: var(--main_dark_gray);
+    font-size: 12px;
+  }
+
+  .form2 td.reg_field_value {
+    padding: 0px;
+  }
+
+  span.dt_icon {
+    border: 0px;
+  }
+
+  div.usr_nm:before,
+  span.dt_icon:before,
+  .form3 div.mail_icon:before,
+  .form3 div.pass_icon:before,
+  .form3 div.telephone_icon:before {
+    filter: brightness(0.5);
+    background-size: 16px;
+    border: 0px;
+    margin: 0px;
+    background-size: contain;
+    width: 16px;
+    height: 24px;
+    top: 9px;
+    left: 4px;
+    mask-size: 24px;
+  }
+  .icon_eye:after {
+    filter: brightness(0.5);
+    background-size: 16px;
+  }
+
+  .log_reg_sec a:last-child {
+    color: #fff;
+    border-radius: 16px;
+    padding: 1px;
+  }
+
+  .betslip_bottom_bar {
+    border-bottom: 40px solid var(--gray-3);
+    bottom: 200px;
+  }
+
+  .btn_right,
+  .btn_left {
+    width: calc(50% - 16px);
+  }
+
+  .registration_tbl td.reg_field_button.back_button_area {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
+    align-items: center;
+  }
+
+  .betslip_bottom_bar .search_icon:after {
+    color: var(--main_red);
+  }
+
+  .betslip_icon {
+    background-image: url("/uploads/files/betslip-icon-png-663d2896cc94f.png");
+  }
+
+  .sportsbook_menu .selected.menu_item span,
+  .sportsbook_container .sportbook_status .sportsbook_status_btn.active a {
+    color: var(--main_red);
+  }
+
+  .sportsbook_container .sportbook_status {
+    background: var(--secondary_white);
+  }
+
+  .sportsbook_container .sportsbook_categories {
+    background: var(--primary_white);
+  }
+
+  .sportsbook_container .sportbook_status .sportsbook_status_btn:hover,
+  .sportsbook_container .sportbook_status .sportsbook_status_btn.active {
+    background: transparent;
+  }
+
+  .sportsbook_container .sportsbook_categories .sportsbook_category,
+  .sportsbook_container .sportbook_status .sportsbook_status_btn,
+  .sportsbook_container .sportbook_status .sportsbook_status_btn a {
+    color: var(--main_black);
+    border-bottom: 0px;
+    font-weight: 500;
+  }
+
+  .sportsbook_container .sportsbook_categories .sportsbook_category {
+    padding: 10px;
+  }
+
+  .sportsbook_container .sportsbook_categories .sportsbook_category {
+    background: transparent;
+    min-width: 64px;
+    border-radius: 24px;
+  }
+
+  .sportsbook_container .sportsbook_categories .sportsbook_category .cat_name {
+    position: relative;
+    z-index: 1;
+  }
+
+  .selected .sporticon {
+    background-color: var(--main_color);
+  }
+
+  .sportsbook_filter .single_filter.main {
+    background: var(--primary_white);
+    color: var(--main_color);
+    font-weight: 600;
+  }
+
+  .sportsbook_filter .single_filter {
+    padding: 12px 4px;
+  }
+  .sportsbook_filter .single_filter img {
+    width: 24px;
+  }
+
+  .single_filter.single_filter_19 img,
+  .single_filter.single_filter_5 img,
+  .single_filter.single_filter_57 img,
+  .tst1.single_filter.main img {
+    filter: brightness(0.5);
+  }
+
+  .fw_body .fw_bet_section.fw_bet_section_1 .selection_box {
+    border-radius: 8px;
+  }
+
+  .tst1.single_filter.main img {
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .sportsbook_filter .single_filter,
+  .sportsbook_filter .filter_submenu a {
+    background-color: var(--primary_white);
+    color: var(--main_dark_gray);
+    font-size: 12px;
+  }
+
+  .sportsbook_filter .filter_submenu a {
+    border-bottom: 1px solid var(--main_light_gray);
+    padding: 10px 20px;
+  }
+
+  .sportsbook_days_filtering .days_filter {
+    padding: 11px 5px;
+  }
+
+  .league_events_wrapper {
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .event_filter a {
+    color: var(--main_dark_gray);
+  }
+
+  #sports_odds .league_events_wrapper .sb_sec_title {
+    background: var(--primary_white);
+    color: var(--main_dark_gray);
+    font-weight: 500;
+    height: 40px !important;
+    width: 100%;
+    border: 0;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .sportsbook_container
+    .sportsbook_categories
+    .sportsbook_category
+    .cat_name
+    span {
+    font-weight: bold;
+  }
+
+  #sports_odds .sb_sec_title {
+    padding: 0px;
+  }
+
+  .swiper-backface-hidden .swiper-slide {
+    padding: 6px;
+    width: calc(100vw - 12px) !important;
+  }
+
+  .featured_widget_container {
+    background: var(--primary_white);
+    border-radius: 16px;
+  }
+
+  #fe_body .scroll_up_btn.btn_general {
+    margin: 16px 0px;
+    background: var(--main_color);
+  }
+
+  .go_back_btn {
+    left: 0px;
+  }
+
+  .go_back_btn:after {
+    top: 8px;
+    background-color: gray;
+  }
+
+  .sports_col .slt_info {
+    height: 40px !important;
+  }
+
+  .go_back_btn:before {
+    line-height: 40px;
+  }
+
+  .sportsbook_container .status_title {
+    background-color: var(--secondary_white);
+    margin-bottom: 0px !important;
+    padding: 12px 8px;
+  }
+
+  .sportsbook_container .sportsbook_events .spn_odds_section {
+    background-color: var(--main_white);
+    border-bottom: 0px !important;
+    padding: 8px 4px;
+    flex-direction: column;
+    margin-bottom: 2px;
+  }
+
+  .sportsbook_container .status_title span {
+    color: var(--main_dark_gray);
+    font-size: 14px;
+  }
+
+  .seal_container {
+    grid-column: 1 / span 3;
+    margin: 0px;
+    padding: 16px 0px;
+    border: 0;
+    background: var(--main_color);
+  }
+
+  .footer_payments {
+    grid-column: 1 / span 3;
+    background: var(--main_dark_color);
+    padding: 16px 0px;
+  }
+
+  .footer_payments .inner {
+    background: transparent;
+    padding: 0px;
+  }
+
+  .desktop_icon_wrapper {
+    grid-column: 1 / span 3;
+    padding: 16px 0px 0px 0px;
+    background: var(--main_color);
+  }
+
+  .desktop_icon_wrapper .desktop_icon {
+    height: 48px;
+  }
+
+  .desktop_icon_wrapper .desktop_icon a {
+    text-align: center;
+    color: var(--main_white);
+  }
+
+  .footer_info {
+    background: var(--main_color);
+    padding: 0px 0px 12px 0px;
+  }
+
+  .footer_info .foot_info_txt {
+    font-size: 12px;
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box {
+    border-radius: 8px;
+    height: 40px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box {
+    background-color: var(--secondary_white);
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section {
+    padding: 8px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_event_details {
+    display: flex;
+    margin-top: 0px;
+    flex-direction: column;
+    grid-column: 3;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_more_options:nth-child(3) {
+    margin-right: 4px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_more_options
+    a {
+    color: #fff;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_more_options
+    a
+    > div {
+    gap: 6px !important;
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_more_options
+    a
+    > div
+    > svg {
+    fill: #fff;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .selector
+    span,
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .odd
+    span {
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    color: var(--main_color);
+    font-weight: 700;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .odd
+    span {
+    color: var(--main_dark_gray);
+    position: relative;
+    right: 8px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .selector
+    span {
+    position: relative;
+    right: -16px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_competitor {
+    margin-bottom: 4px;
+    grid-column: 1 / 3;
+    height: 14px;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section {
+    width: 100%;
+  }
+
+  .single_event_sle_info,
+  .single_event_dt {
+    padding: 8px 0px;
+  }
+
+  .odds_table a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-height: 78px;
+    gap: 16px;
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  .single_event_holder.sport_1 .single_event_info {
+    background: var(--primary_white);
+    color: var(--main_dark_gray);
+  }
+
+  .single_ev_btc_wrapper.event_filter a {
+    border-bottom: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .single_ev_btc_wrapper.event_filter a.selected {
+    border-bottom: 0px;
+    border-top: 0px;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+    color: var(--main_color);
+  }
+
+  .single_ev_btc_wrapper.event_filter a.selected:before {
+    content: "";
+    display: flex;
+    height: 47px;
+    width: 100%;
+    position: absolute;
+    border-radius: 16px;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+  }
+
+  .single_ev_btc_wrapper.event_filter a {
+    border-bottom: 0px;
+    border-top: 0px;
+    color: var(--main_dark_gray);
+  }
+
+  .single_ev_btc_wrapper.event_filter a span {
+    padding: 0px;
+  }
+
+  .home_sections_banners .home_sections_boxes {
+    padding: 0px;
+  }
+
+  .bottom_banner,
+  .home_boxes_nav {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .btn_cnt {
+    background: var(--main_white);
+  }
+
+  .sportsbook_navigation .betstlip_full .betslip_counter {
+    padding: 1px 6px;
+    right: 12px;
+  }
+
+  .single_event_close_area,
+  .single_event_holder .close_league {
+    height: 20px;
+    width: 20px;
+    background: var(--secondary_white);
+  }
+
+  #fe_footer .logo {
+    background-color: var(--main_color);
+    height: 100%;
+    background-image: none !important;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px;
+    margin: 0px;
+  }
+
+  #fe_footer .logo:after {
+    content: "";
+    background-image: url(/uploads/files/gordon-moddy-png-6672fa2e89a99.png);
+    display: flex;
+    width: 100%;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #fe_footer .logo:before {
+    content: "";
+    background-image: url(/uploads/files/invictos-logo-head-mobile-png-6672fa2a8c95a.png);
+    display: flex;
+    width: 100%;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .footer_nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px;
+  }
+  .footer_nav a {
+    padding: 4px;
+    text-align: start;
+  }
+
+  .footer_links_sec {
+    margin-bottom: 0px;
+    background-color: var(--main_dark_color);
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #sports_odds .event_section .event_type_title {
+    padding: 8px 10px;
+    text-align: start;
+    background: transparent;
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  .single_event_odds .odds_table {
+    padding: 10px;
+  }
+
+  .event_section .event_type_title span {
+    font-weight: 500;
+  }
+
+  .single_event_odds
+    .odds_table.odds_tbl_cat3.odds_tbl_bt_1644
+    .event_type_selections_3,
+  .single_event_odds
+    .odds_table.odds_tbl_cat3.odds_tbl_bt_1648
+    .event_type_selections_3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #sports_odds .event_section .event_type_selections div a {
+    border-right: 0px solid var(--main_color);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    flex-direction: row;
+    background: transparent;
+    height: 100%;
+    padding: 8px 4px;
+  }
+
+  .event_section .odds_trs .ev_sel_odd_result.selected {
+    background: var(--selectOdd) !important;
+  }
+  .event_section .odds_trs .ev_sel_odd_result.selected a span {
+    color: var(--main_black) !important;
+  }
+
+  #sports_odds .event_section .event_type_selections div a .selector_name {
+    color: #fff;
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  #sports_odds .event_section .event_type_selections div a .selecter_odd {
+    font-weight: 700;
+  }
+
+  .event_section .odds_trs .ev_sel_odd_result.selected a span {
+    color: var(--main_black);
+  }
+
+  #sports_odds .event_section .event_type_selections div {
+    background: transparent;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .sr-bb .srt-base-2 {
+    background-color: var(--main_color) !important;
+    color: #fff !important;
+    border-radius: 8px;
+  }
+
+  .sr-tabs.srct-tabs.srt-base-2.srt-elevation-1 {
+    background: var(--secondary_white) !important;
+  }
+
+  .sr-bb .sr-tabs-tab__indicator.srm-is-active {
+    color: var(--main_red) !important;
+  }
+
+  .sr-bb .sr-cb-market-list__list-wrapper {
+    background-color: var(--third_color) !important;
+  }
+
+  .sr-bb .sr-tabs__flexcontainer {
+    background: var(--secondary_white);
+  }
+
+  .srct-tab--active .sr-tabs-tab__content.srct-tab__content {
+    filter: brightness(1) !important;
+  }
+
+  .sr-tabs-tab__content.srct-tab__content {
+    opacity: 1;
+    filter: brightness(0.3);
+  }
+
+  .srct-tab--active span {
+    color: var(--main_red) !important;
+  }
+
+  .sr-bb .sr-tabs-tab__indicator__content {
+    border: 0;
+  }
+
+  .sr-bb .sr-bb {
+    background: var(--third_color) !important;
+  }
+
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(2)
+    > div
+    > div
+    > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
+    > div.sr-cb-market-view__slides
+    > div
+    > div:nth-child(1)
+    > div
+    > div
+    > div.sr-scrollbars__container
+    > div:nth-child(1)
+    > div
+    > div
+    > div.sr-cb-outcome-grid__bet-assist
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div:nth-child(2)
+    > div.sr-ba-horizontal-title__wrapper.srt-text-secondary.srm-is-uppercase {
+    margin-bottom: 8px;
+  }
+
+  .sr-bb .sr-cb-bet-builder-odds__wrapper {
+    padding: 8px;
+  }
+
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(2)
+    > div
+    > div
+    > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
+    > div.sr-cb-market-view__bet-builder
+    > div
+    > div
+    > div
+    > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating
+    > div
+    > div.sr-cb-betbuilder-animate__button
+    > div,
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(1)
+    > div
+    > div.sr-cb-market-list__bet-builder
+    > div
+    > div
+    > div
+    > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
+    > div
+    > div.sr-cb-betbuilder-animate__button
+    > div,
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(1)
+    > div
+    > div.sr-cb-market-list__bet-builder
+    > div
+    > div
+    > div
+    > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
+    > div
+    > div.sr-cb-betbuilder-animate__outcome-list
+    > div
+    > div
+    > div:nth-child(1)
+    > div
+    > div {
+    padding: 4px;
+  }
+
+  .sr-bb .sr-cb-button__wrapper:after {
+    content: "Adicionar ao bilhete";
+    color: #fff !important;
+    opacity: 1;
+    text-align: center;
+    position: static;
+  }
+
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(1)
+    > div
+    > div.sr-cb-market-list__bet-builder
+    > div
+    > div
+    > div
+    > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
+    > div
+    > div.sr-cb-betbuilder-animate__button
+    > div
+    > div {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  #bslip_content,
+  #sports_slip {
+    background: var(--secondary_white);
+    z-index: 996;
+  }
+
+  .bs_title {
+    background: var(--primary_white);
+    color: var(--main_dark_gray);
+    margin-top: 3px;
+  }
+
+  .bs_overlay.show_betslip,
+  .slip_contents,
+  .slip_stake_area,
+  .slip_stake_area .clear_bslip,
+  #bslip_content .slip_selections_area:not(:empty) {
+    background-color: var(--secondary_white) !important;
+  }
+
+  #bslip_content .bslip_selection_tbl tr,
+  td.slip_sel_col_clear,
+  #bslip_content .bslip_selection_tbl {
+    background-color: transparent !important;
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_content .slip_sel_row.last_ev_row td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .slip_event_info_selector span {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .no_selections_div {
+    border-radius: 16px;
+    border: 1px solid var(--main_red);
+    background: var(--main_color);
+  }
+
+  #bslip_content .close_btn {
+    background-color: transparent !important;
+    font-weight: bold;
+  }
+  #bslip_content .slip_selections_area:not(:empty) {
+    background-color: var(--primary_white) !important;
+    margin: 8px;
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 6px 2px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 250px;
+    height: auto;
+  }
+
+  #bslip_content td.slip_sel_col_odd span {
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_content .slip_selections_area .teams {
+    padding-top: 6px;
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_content .bslip_selection_tbl tr .selname {
+    gap: 4px;
+    align-items: flex-start;
+  }
+  #bslip_content .bslip_selection_tbl tr .selname i {
+  }
+
+  .clear_bslip a {
+    background-color: var(--main_color);
+    border-radius: 8px;
+    width: 20px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  }
+
+  .clear_bslip a:before {
+    content: "\f1f8";
+    color: #fff;
+    font-family: "FontAwesome";
+  }
+
+  .slip_buttons_area {
+    background: var(--primary_white);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 4px;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .not-logged-in .slip_buttons_area {
+    color: var(--main_dark_gray);
+    line-height: 24px;
+  }
+
+  .not-logged-in .slip_buttons_area a {
+    border: 0 !important;
+    padding: 4px;
+    font-size: 16px !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px 0px;
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_info_area {
+    padding: 0px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px 0px;
+    background: var(--primary_white);
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_info_area table {
+    border-spacing: 0px;
+  }
+
+  #bslip_info_area table tbody {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #bslip_info_area table tbody .odds_row,
+  #bslip_info_area table tbody .bet_row {
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  #bslip_info_area table tbody .odds_row {
+    width: 100%;
+  }
+
+  #bslip_info_area table tbody .bet_row {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  #bslip_info_area .stake_field {
+    padding-left: 8px !important;
+  }
+
+  #bslip_info_area table tbody .bet_row .sba_val input::placeholder {
+    color: var(--main_dark_gray) !important;
+  }
+
+  #bslip_info_area table tbody .bonus_row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 4px;
+  }
+
+  #bslip_info_area .sba_txt {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #bslip_info_area table tbody tr:nth-child(4) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #bslip_info_area table tbody tr:nth-child(4) td:nth-child(1):before {
+    content: "Ganhos potenciais";
+    font-size: 14px;
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_info_area table tbody tr:nth-child(4) .sba_info {
+    width: 130px;
+  }
+
+  #bslip_info_area table tbody .odds_row .sba_val {
+    width: 100px;
+  }
+
+  .odds_row .sba_val span {
+    background: transparent;
+    color: var(--selectOdd);
+    text-align: right;
+  }
+
+  .mm_win_dv .mm_win_val {
+    border-radius: 8px;
+    text-align: center;
+    background: transparent;
+    color: var(--main_color);
+    text-align: right;
+  }
+
+  .fa-remove:before,
+  .fa-close:before,
+  .fa-times:before {
+    content: "\f1f8";
+    color: var(--main_color);
+  }
+
+  .login .content_container {
+    padding: 0px 0px 20px 0px;
+    background: var(--primary_white);
+  }
+
+  .login .page_sub_tt {
+    padding: 12px 0px 0px 0px;
+    font-size: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .content_container .txt p {
+    margin-top: 0px;
+    font-style: normal;
+  }
+
+  .login .page_sub_tt:before {
+    content: "";
+    background-image: url(/uploads/files/invictos-logo-black-mobile-png-6675ab650b7fe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    color: var(--main_dark_gray);
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    height: 48px;
+  }
+
+  .login_page_container form {
+    padding: 8px 10px;
+  }
+
+  .content_container .txt a:nth-of-type(1) {
+    color: var(--main_dark_gray) !important;
+  }
+
+  .txt > a:first-child {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    right: 20px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .txt > p {
+    font-size: 0px;
+  }
+
+  .txt > p:before {
+    content: "Ainda não tem uma conta? ";
+    font-size: 12px;
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  .txt > p a {
+    font-size: 0px !important;
+  }
+
+  .txt > p a:before {
+    content: "Criar uma conta grátis";
+    font-size: 12px;
+    color: var(--main_green);
+    text-decoration: underline;
+    font-style: normal;
+  }
+
+  .deposit-lobby-page
+    #fe_web_container
+    #fe_main
+    .paym_field_cont
+    table
+    tr
+    td
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]),
+  .withdraw-lobby-page
+    #fe_web_container
+    #fe_main
+    .paym_field_cont
+    table
+    tr
+    td
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]) {
+    background: var(--secondary_white);
+    border-radius: 8px;
+  }
+
+  .login_page_container form .login_page_row .input_fld input:nth-child(1),
+  .login_page_container form .login_page_row .input_fld input:nth-child(2) {
+    background: var(--secondary_white) !important;
+    border: 0px !important;
+    border-radius: 8px !important;
+  }
+
+  .login_page_container form .login_page_row .input_fld input:placeholder {
+    color: var(--main_dark_gray) !important;
+  }
+
+  .login_page_container .login_page_row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login_option_switch.button {
+    background: var(--main_color);
+    color: var(--main_white);
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  .login_page_row button.login_btn a:first-child {
+    border-radius: 16px;
+    margin-top: 0px;
+  }
+  .login_page_row button.login_btn a:last-child {
+    color: #fff;
+    border-radius: 36px;
+    background: linear-gradient(180deg, #000000 0%, #b60707 100%);
+    box-shadow: 0px 4px 15px 0px rgba(255, 0, 0, 0.22);
+  }
+  .login_page_row button.login_btn {
+    background: var(--main_color);
+    color: #fff;
+    font-weight: normal;
+    border-radius: 8px;
+    margin-top: 32px;
+  }
+  .login_page_row a:last-child::before {
+    content: "entrar";
+    width: 500px;
+    height: 40px;
+    border-radius: 36px;
+    margin-bottom: 1px;
+  }
+  .login_option_switcher {
+    padding: 0 35px;
+  }
+
+  .login_menu_area {
+    top: 70px;
+  }
+
+  .login_menu_area {
+    top: 60px;
+    background: var(--primary_white);
+  }
+
+  .login_menu_area .login_area_header {
+    display: flex;
+    justify-content: center;
+    background: var(--main_white);
+    border: 0px;
+    color: var(--main_color);
+    font-weight: 500;
+  }
+
+  .login_menu_area_v2 .balance_sec {
+    background: var(--secondary_white);
+  }
+
+  .login_menu_area_v2 .header_sec_loggedin_menu_v2 {
+    background: var(--main_white);
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  .login_menu_area .ttl_sec,
+  .login_menu_area .profile_sec,
+  .sec_menu a {
+    background: transparent;
+    color: var(--main_dark_gray);
+  }
+
+  .login_menu_area_v2 .balance_btns_holder .balance_container,
+  .login_menu_area_v2 .balance_btns_holder .open_slip_container {
+    background: transparent;
+    border: 0px;
+  }
+
+  .login_menu_area .ttl_sec {
+    display: flex;
+    align-items: center;
+    height: 48px;
+  }
+
+  .login_menu_area .ttl_sec #text {
+    font-size: 20px;
+  }
+
+  .login_menu_area a.logout_link {
+    background: var(--main_color);
+    font-weight: bold;
+    border-radius: 0px;
+    color: var(--main_white);
+    width: 84%;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
+      0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02),
+      0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
+      0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
+      0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.14);
+  }
+
+  .main_menu {
+    background: var(--main_white);
+    display: flex;
+    height: 64px;
+  }
+
+  .main_menu ul li {
+    border: 0px;
+    filter: brightness(0.4);
+    height: 64px;
+  }
+  .left_menu_area_v2 .main_menu ul li a,
+  .main_menu ul li a:hover,
+  .main_menu ul li a:visited {
+    margin-left: 0px;
+  }
+
+  .home_boxes_nav .hp_box a.all_sports,
+  .home_boxes_nav .hp_box a.live_bet {
+    background-color: var(--odds_aumentadas_bg);
+  }
+
+  .main_menu ul li a,
+  .main_menu ul li a:hover,
+  .main_menu ul li a:visited {
+    width: 92px;
+    height: 64px;
+  }
+
+  .top_menu li a:before {
+    background-size: 20px !important;
+  }
+
+  .main_menu ul li a {
+    font-size: 11px !important;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_competitor
+    .score
+    span {
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_competitor
+    .competitor
+    span {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .mob_header .deposit-cont {
+    min-width: 65px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+    position: relative;
+    right: 0px;
+    align-items: flex-end;
+  }
+  .mob_header .deposit-cont .deposit_ico {
+    mask-image: none;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100px;
+  }
+
+  .mob_header .deposit-cont .deposit_ico::before {
+    content: "Depositar";
+    font-size: 9px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0px 4px;
+    top: 0px;
+    color: var(--main_dark_color) !important;
+    background-color: var(--main_white);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 6px;
+    border-radius: 10px;
+    box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
+      0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02),
+      0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
+      0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
+      0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.14);
+  }
+
+  .ttl_sec:before {
+    height: 32px;
+    top: 0px;
+  }
+
+  div.panel_title_bar,
+  td.panel_title_bar > div {
+    background-color: var(--secondary_white);
+  }
+
+  div.panel_title_bar p {
+    color: var(--main_dark_gray);
+  }
+
+  #bslip_content .slip_selections_area .teams .competitor1,
+  #bslip_content .slip_selections_area .teams .competitor2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .bs_search_form.full .bs_search_form_wrapper {
+    background-color: var(--primary_white);
+    color: var(--main_dark_gray);
+  }
+
+  .profile_tbl tr:nth-child(1) td:nth-child(2),
+  .profile_tbl tr td:nth-child(2) {
+    padding: 0px;
+  }
+
+  #fe_main:not(:has(.digitain_outer_wrapper)) select {
+    width: 100%;
+    background: var(--secondary_white) !important;
+    border-bottom: 0px !important;
+    color: var(--main_gray_dark) !important;
+    padding-left: 12px !important;
+    font-size: 12px;
+  }
+
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]).datepicker,
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]).txt_time,
+  #fe_main
+    #bslip_content
+    .sba_val:not(:has(.digitain_outer_wrapper))
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]),
+  textarea {
+    color: var(--main_dark_gray) !important;
+    border-bottom: 0px !important;
+    padding-left: 12px !important;
+    background: var(--secondary_white) !important;
+  }
+
+  .bs_search_form .bs_search_form_wrapper > table td {
+    font-style: normal;
+  }
+
+  #fe_main .profile_tbl input {
+    background: var(--secondary_white) !important;
+    border-bottom: 0px !important;
+  }
+
+  #fe_main button.update {
+    border-radius: 8px;
+    background: var(--main_color);
+  }
+
+  select option {
+    color: var(--main_dark_gray);
+    background: var(--secondary_white);
+  }
+
+  .profile_tbl tr td {
+    font-style: normal !important;
+  }
+
+  .left_menu_area .main_menu {
+    flex-direction: column;
+  }
+
+  .left_menu_area .main_menu #nav {
+    background: var(--main_white);
+  }
+
+  .left_menu_area_v2 .main_menu #nav_2 ul li a {
+    border-bottom: 0;
+  }
+
+  .left_menu_area_v2 .main_menu #nav_2 {
+    height: 100%;
+    background-color: var(--main_white);
+  }
+
+  .left_menu_area_v2 .main_menu #nav_2 ul .offers_link,
+  .left_menu_area_v2 .main_menu ul.nav_2_menu li.offers_link a {
+    background: var(--main_white);
+    color: var(--main_white);
+    filter: brightness(1);
+  }
+  .left_menu_area .main_menu .top_menu li {
+    background: transparent;
+  }
+
+  .left_menu_area .main_menu .top_menu li a {
+    border-right: 0px;
+    background: transparent;
+  }
+
+  .left_menu_area_v2 .left_menu_area_inner {
+    background: var(--main_white);
+  }
+
+  #fe_header #set_menu_div .lang_dropdown {
+    background: var(--secondary_white);
+    color: var(--main_dark_gray);
+    border-radius: 8px;
+  }
+
+  .deposit-lobby-page .payment_method_list,
+  .withdraw-lobby-page .payment_method_list {
+    background-color: var(--secondary_white);
+  }
+
+  #payment_tab_45 {
+    background: var(--secondary_white);
+  }
+
+  #payment_tab_45:before {
+    content: "";
+    background-image: url(/uploads/files/anyspace-payment-png-666372232059c.png);
+    height: 64px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+  }
+
+  #fe_main .mp_btn_cont button.mp_btn {
+    border-radius: 8px;
+    background: var(--main_color);
+  }
+
+  .extra_info_holder,
+  .currency_holder {
+    background: var(--main_color);
+    border-radius: 0px 8px 8px 0px;
+    font-weight: bold;
+    color: var(--main_white);
+  }
+
+  .top_menu a:before {
+    margin-bottom: -4px;
+    top: 4px;
+  }
+
+  .left_menu_area_v2 .main_menu #nav_2 ul li a span,
+  #fe_header .lang_dropdown_flags:after {
+    color: var(--main_dark_gray);
+  }
+
+  .section_title_bar {
+    background: var(--secondary_white);
+    color: var(--main_dark_gray);
+    display: flex;
+  }
+
+  .title_text {
+    color: var(--main_dark_gray);
+  }
+
+  .fep37037 .section_title_bar .bs_icon {
+    filter: brightness(0.5);
+    display: block;
+  }
+
+  #bs_contentarea .main_title_bar {
+    background: var(--main_color);
+    margin: 0px;
+    padding: 4px 10px;
+  }
+
+  .balance_page .ammount {
+    color: #fff;
+    margin-left: 8px;
+  }
+
+  .section_title_bar {
+    background: var(--secondary_color);
+  }
+
+  .fields_container {
+    background: var(--primary_white);
+    color: var(--main_dark_gray);
+  }
+
+  .fields_container .field_text {
+    color: var(--main_dark_gray);
+  }
+
+  .fields_container .ammount.field_text {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .image-additional-input-container select,
+  .image-additional-input-container textarea {
+    background: var(--secondary_white) !important;
+  }
+
+  .my_bets_container .status_container,
+  .my_bets_container .date_container {
+    padding: 0px;
+    background: var(--secondary_white) !important;
+  }
+
+  .my_bets_container .touch_menu li.date-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .my_bets_container .touch_menu {
+    background: var(--secondary_white);
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-radius: 0px;
+  }
+
+  .touch_menu.date-style.date_filter_menu li {
+    align-items: center;
+    display: flex;
+  }
+
+  .touch_menu.date-style.date_filter_menu li div {
+    padding: 0px;
+  }
+
+  .fa-clock-o:before {
+    color: var(--main_color);
+  }
+
+  #fe_main .update,
+  #fe_main .search,
+  #fe_main .add,
+  #fe_main .delete,
+  #fe_main .btn_general,
+  #fe_main .download {
+    border-radius: 8px;
+    background-color: var(--main_color) !important;
+  }
+
+  .my_bets_container .touch_menu.date-style li div.selected,
+  .my_bets_container .touch_menu.date-style li div:hover {
+    color: var(--main_red);
+    border: 0;
+  }
+
+  .my_bets_container .bet_slips_container .betting_slip .betting_left,
+  .my_bets_container .bet_slips_container .betting_slip .betting_right {
+    background: var(--secondary_white);
+    color: var(--main_dark_gray);
+  }
+
+  .my_bets_container .bet_slips_container .betting_slip .betting_right {
+    border-top-right-radius: 16px;
+  }
+
+  .my_bets_container .bet_slips_container .betting_slip .betting_left {
+    border-top-left-radius: 16px;
+  }
+
+  .my_bets_container .bet_slips_container .betting_slip {
+    box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
+      0px 8.853px 13.067px 0px rgba(0, 0, 0, 0.02),
+      0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
+      0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
+      0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.14);
+  }
+
+  .betting_slip .light {
+    font-weight: 400;
+  }
+
+  .my_bets_container .bet_slips_container .betting_slip .betting_info {
+    background: var(--main_color);
+  }
+
+  .betting_slip .betting_slip_section .half_right .res_ev_RUNNING {
+    font-weight: bold;
+    color: var(--selectOdd);
+  }
+
+  .portable-device .notifications_tbl .confirm_row .notice,
+  .portable-device .notifications_tbl .warning_row .notice {
+    border-radius: 8px;
+  }
+
+  .sporticon {
+    width: 24px;
+    height: 20px;
+    background: var(--main_gray);
+  }
+
+  .betting_slip .bet_amount {
+    margin: 4px 0px 10px 0px;
+    font-weight: 400;
+  }
+
+  .my_bets_container .touch_menu li {
+    height: 100%;
+  }
+
+  .my_bets_container .touch_menu li div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 4px !important;
+  }
+
+  .my_bets_container .touch_menu li div span {
+    position: relative;
+    top: 24px;
+    color: var(--main_dark_gray);
+  }
+
+  .my_bets_container .touch_menu li div.selected span {
+    color: var(--main_color);
+  }
+
+  .my_bets_container .touch_menu li div.selected {
+    background: transparent !important;
+    color: var(--main_red);
+  }
+
+  .single_ev_btc_wrapper.event_filter.show {
+    height: 48px;
+    gap: 12px;
+    background: var(--main_white);
+    box-shadow: 6px 4px 14px 4px rgba(227, 227, 227, 0.92);
+  }
+
+  .single_ev_btc_wrapper.event_filter.show #text {
+    margin-top: 4px;
+  }
+
+  .my_bets_container .bet_slips_container {
+    background: var(--main_white);
+  }
+
+  #fe_main .slip_buttons_area button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main_color);
+    border: 0px;
+    color: var(--main_white);
+    font-size: 15px;
+    margin: 0px;
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  .title_tr.title_tr_bt,
+  .title_tr.title_tr_sel {
+    height: 100% !important;
+    background: transparent !important;
+  }
+
+  .ev_sel_odd.selected,
+  .ev_sel_odd.selected:hover,
+  .ev_sel_odd.selected:visited,
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box.selected {
+    background: var(--main_green) !important;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box.selected {
+    color: var(--main_white) !important;
+  }
+
+  .ev_sel_odd.selected a,
+  .ev_sel_odd.selected:hover a,
+  .ev_sel_odd.selected:visited a,
+  .ev_sel_odd.selected a span {
+    background: transparent;
+    color: var(--main_white);
+  }
+
+  #sports_odds .sports_scroll_content,
+  .odds_open {
+    display: flex;
+    width: 100%;
+    background: var(--secondary_white);
+    flex-direction: column;
+  }
+
+  .odds_open,
+  .sports_col.sportsbook_container .sports_scroll_content {
+    flex-direction: column;
+  }
+
+  .odds_open.event_section {
+    flex-direction: row;
+  }
+
+  .slip_stake_area .clear_bslip {
+    height: 100%;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: end;
+    padding: 0px 16px;
+  }
+
+  #bslip_content .slip_sel_row td.slip_sel_col_odd {
+    padding: 0px;
+  }
+
+  .ev_sel_odd a,
+  .ev_sel_odd a:hover,
+  .ev_sel_odd a:visited {
+    line-height: 12px !important;
+  }
+
+  #fe_main .sr-bb .sr-header.srt-primary-6 {
+    background: var(--secondary_color);
+    font-size: 12px;
+  }
+
+  .sr-bb .sr-lmt-plus__segment.srm-scoreboard,
+  #fe_main .sr-bb .srt-base-1 {
+    background: var(--main_color);
+  }
+
+  .sr-bb .sr-lmt-plus-0-hor-chart__display-value.srm-is-bold {
+    font-weight: 400;
+  }
+
+  .sr-lmt-plus-1-statistics__wrapper.srt-base-1 {
+    background: var(--primary_white) !important;
+    color: var(--main_dark_gray) !important;
+  }
+
+  #fe_main .sr-bb .srt-away-1 {
+    background: var(--main_color);
+  }
+
+  #fe_main .sr-bb .srt-home-1 {
+    background: var(--main_dark_gray);
+  }
+
+  .sr-bb .sr-goalscorers .sr-ltr {
+    background: none !important;
+  }
+  #bs_contentarea .main_title_bar .title_text {
+    color: var(--main_white);
+  }
+
+  .event_container .single_event_odds .odds_open .bt_title,
+  .odds_tbl_holder .bt_sub_title_holder {
+    background: var(--third_color);
+    border: 0px;
+  }
+
+  .single_event_close_area:before {
+    left: 5px;
+    top: -9px;
+    color: var(--main_dark_gray);
+  }
+
+  .single_event_holder .close_league {
+    z-index: 10;
+    background: transparent;
+  }
+
+  #sports_menu_item_113 .cat_name:before {
+    content: "Odds Especiais";
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--main_gray);
+  }
+
+  .sb_menu_sec_area.open {
+    top: 70px;
+  }
+
+  #fe_main #sb_search_form input.sb_input {
+    background: var(--main_color);
+    padding: 24px 16px;
+  }
+
+  #fe_main .sb_menu_sec_area.open {
+    background: var(--third_color);
+  }
+
+  .bet_types_col.bet_types_col_col1,
+  .bet_types_col.bet_types_col_col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bet_types_col.bet_types_col_col1 .odds_open,
+  .bet_types_col.bet_types_col_col2 .odds_open {
+    background: var(--primary_white);
+  }
+
+  #fe_header .message_center_new_messages_container {
+    max-width: 35px;
+    min-width: 25px;
+    top: 2px;
+    position: relative;
+    background: transparent;
+  }
+
+  .event_section .event_type_selections {
+    display: grid;
+  }
+
+  .event_section .event_type_selections {
+    display: grid;
+  }
+
+  .event_section .event_type_selections_3 {
+    background: transparent;
+    border-bottom: none;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  #sports_odds .event_section .event_type_selections .ev_sel_odd_result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary_white);
+    border-radius: 8px;
+    margin: 2px;
+    padding-right: 1px;
+    width: 100%;
+  }
+
+  .odds_trs.event_type_selections.event_type_selections_3 .ev_sel_odd_result {
+    width: 33.3%;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat3.odds_tbl_bt_1245
+    .under_over_selector_name {
+    width: calc(20% - 2px) !important;
+    height: 83px !important;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat3.odds_tbl_bt_1245
+    .odds_trs.event_type_selections.event_type_selections_3 {
+    border-bottom: 2px solid var(--secondary_white);
+    display: grid;
+    grid-template-columns: 64px 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 4px;
+    padding: 4px 0px;
+  }
+
+  .single_event_holder .single_event_info .sli_event .competitor1,
+  .single_event_holder .single_event_info .sli_event .competitor2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .sr-cb-header__product-name.srt-text-secondary.srm-has-ellipsis {
+    font-size: 0px;
+  }
+
+  .sr-cb-header__product-name.srt-text-secondary.srm-has-ellipsis::before {
+    content: "Aposta Customizada";
+    font-size: 12px;
+  }
+
+  .sr-bb .sr-cb-header__inner .srt-text-secondary::before {
+    color: var(--main_dark_gray);
+  }
+
+  .sr-bb .sr-cb-list-item__wrapper {
+    border-radius: 8px;
+  }
+
+  .odds_table.event_type_section.bci_4.bci_161.btid_1 .event_type_title span {
+    font-size: 0px;
+  }
+
+  .odds_table.event_type_section.bci_4.bci_161.btid_1
+    .event_type_title::before {
+    content: "Resultado do Jogo";
+    font-size: 14px;
+  }
+
+  .paym_field_cont table tr td .title,
+  .paym_field_cont table tr td .field {
+    color: var(--main_dark_gray);
+  }
+
+  #fe_main .paym_field_cont {
+    background: var(--primary_white);
+  }
+
+  .payment_method_list li a.payment_selected {
+    background: var(--main_color);
+    border-radius: 16px;
+    margin: 4px;
+    padding: 4px;
+  }
+
+  #payment_tab_98:before {
+    content: "";
+    background-image: url(/uploads/files/anyspace-payment-png-666372232059c.png);
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    background-size: 80px;
+    background-position: center;
+  }
+
+  #fe_main
+    .paym_field_cont
+    table
+    tr
+    td
+    input.amount_holder:not([type="radio"]):not([type="checkbox"]):not(
+      [type="submit"]
+    ):not([type="button"]):not([type="reset"]):not([type="file"]),
+  #fe_web_container
+    #fe_main
+    .paym_field_cont
+    table
+    tr
+    td
+    input.payfix_amount:not([type="radio"]):not([type="checkbox"]):not(
+      [type="submit"]
+    ):not([type="button"]):not([type="reset"]):not([type="file"]) {
+    background: var(--secondary_white);
+    border-radius: 8px 0px 0px 8px;
+  }
+  .log_reg_sec a:first-child::before {
+    content: "Entrar";
+  }
+  .log_reg_sec a:last-child::before {
+    content: "Cadastre-se";
+    color: var(--main_color);
+    width: auto;
+    height: 40px;
+    font-size: 11px;
+    border-radius: 16px;
+    margin-bottom: 1px;
+  }
+  .left_menu_area .main_menu .top_menu li {
+    width: 25%;
+  }
+  .left_menu_area .main_menu .top_menu li a.selected {
+    background: var(--secondary_white);
+  }
+
+  .left_menu_area .main_menu .top_menu li a.selected:before {
+    filter: brightness(0.5) saturate(100%) hue-rotate(0deg) sepia(100%)
+      saturate(519%) hue-rotate(-50deg);
+  }
+
+  .left_menu_area .main_menu .top_menu li:has(a.selected) {
+    filter: brightness(1);
+  }
+
+  .top_menu .menu_item span {
+    color: var(--main_gray) !important;
+  }
+
+  .sportsbook_filter .single_filter.main {
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .sportsbook_navigation
+    .navigation_block.invictus_round.invictus_round_casino {
+    background: transparent;
+  }
+
+  #sports_menu {
+    padding: 8px;
+    border-radius: 16px;
+    background: var(--secondary_white);
+    margin-top: 8px;
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .selector {
+    margin-bottom: 0;
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    a {
+    display: flex;
+    flex-direction: row;
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_event_details
+    span {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .login_page_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .login_option_switcher {
+    display: flex;
+    flex-flow: row nowrap !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    padding: 0px;
+    order: -1;
+  }
+
+  #fe_login_box_popup .logo_area {
+    display: flex;
+    order: -1;
+  }
+
+  .sr-bb .sr-cb-header__inner {
+    padding: 0px 8px;
+  }
+
+  .sr-bb .sr-cb-header__click-area.srm-is-clickable {
+    background: var(--secondary_white);
+  }
+
+  .sr-bb .sr-cb-header__item-wrapper.srm-end {
+    justify-content: center;
+  }
+
+  .login_option_switch_text {
+    position: absolute;
+  }
+
+  .login_option_switch.button {
+    clip-path: none;
+    border-radius: 8px;
+  }
+
+  .login_page_container form .login_page_row:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .input_fld {
+    padding: 0px;
+  }
+
+  .login_page_container .login_page_row.login_page_row_btn {
+    margin-top: 0px;
+  }
+  #launcher {
+    bottom: 112px !important;
+    z-index: 995 !important;
+  }
+  .sportsbook_navigation .navigation_block img,
+  .casino_navigation .navigation_block img {
+    margin: 0px auto;
+    width: 16px;
+    height: 16px;
+    filter: brightness(0.5);
+  }
+  .fw_body {
+    padding: 0px;
+    background: var(--primary_white);
+  }
+  .fw_body .fw_bet_section .selection_box a {
+    background-color: var(--secondary_white);
+    color: var(--primary_txt_color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .fw_body .fw_bet_section .selection_box a .selector {
+    color: var(--main_color);
+    font-size: 14px;
+  }
+  .fw_body .fw_bet_section .selection_box a .odd {
+    color: var(--main_dark_gray);
+    font-size: 16px;
+  }
+
+  .fw_body .fw_match_section {
+    color: var(--main_black);
+    padding: 4px 16px;
+    font-size: 12px;
+  }
+
+  .fw_header .fw_header_info {
+    padding: 6px 8px;
+    font-size: 12px;
+    width: 70%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .fw_header .fw_header_info {
+    background-position-x: 10px;
+  }
+
+  .fw_header .fw_header_info.date {
+    width: 30%;
+    background-image: none;
+  }
+  .fw_header .fw_header_info span {
+    vertical-align: middle;
+    color: var(--main_black);
+    font-weight: 600;
+  }
+
+  .fw_header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary_white);
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  #sports_odds .event_section .event_type_selections .under_over_selector_name {
+    font-weight: bold;
+    height: 40px !important;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: span 3;
+    position: relative;
+    border-radius: 8px;
+    color: var(--main_dark_gray);
+  }
+
+  .sportsbook_widget {
+    width: 100%;
+    padding: 0;
+    background: var(--primary_white);
+    border-radius: 16px;
+  }
+
+  .fw_header .fw_header_info:first-child:before {
+    content: "";
+    display: flex;
+    background: url("/uploads/files/lightning-png-6671eebeda888.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .sr-bb .sr-cb-outcome-grid__bet-assist {
+    background: var(--secondary_white);
+  }
+
+  .fw_header .fw_header_info,
+  .fw_header .fw_header_info.date {
+    background: transparent;
+  }
+
+  .sportsbook_widget .swiper-button-prev,
+  .sportsbook_widget .swiper-button-next {
+    width: 6%;
+    background-color: transparent;
+  }
+
+  #fe_main .swiper-button-next:after,
+  #fe_main .swiper-button-prev:after {
+    font-size: 14px;
+    background: transparent;
+    color: var(--main_black);
+  }
+
+  .sportsbook_navigation .navigation_block.invictus_round a,
+  .casino_navigation .navigation_block.invictus_round a {
+    border-radius: 16px;
+    gap: 2px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .sportsbook_navigation .navigation_block,
+  .casino_navigation .navigation_block {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 61px !important;
+    justify-content: center;
+    width: 19%;
+  }
+
+  .casino_navigation .navigation_block {
+    width: 19%;
+  }
+
+  .sportsbook_navigation .navigation_block a span,
+  .casino_navigation .navigation_block a span {
+    font-size: 10px;
+    color: var(--main_gray);
+    font-weight: 500;
+  }
+
+  .sportsbook_navigation .navigation_block.invictus_round,
+  .casino_navigation .navigation_block.invictus_round {
+    background: transparent;
+    border: 0;
+    padding: 1px;
+    border-radius: 16px;
+  }
+  .ev_suspended {
+    color: var(--main_color);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .fw_body .fw_bet_section .selection_box.selected a {
+    background: var(--selectOdd);
+  }
+
+  .sportsbook_navigation .betstlip_full {
+    border-radius: 99%;
+    padding: 4px 10px;
+    top: -57px;
+    background: var(--main_color);
+  }
+
+  .sportsbook_navigation .betstlip_full img {
+    width: 24px;
+  }
+  .sportsbook_navigation .betstlip_full .betslip_name {
+    font-size: 0px;
+  }
+
+  .sportsbook_navigation .betstlip_full .betslip_name:before {
+    content: "Bilhete";
+    font-size: 12px;
+  }
+
+  .navigation_bottom .sportsbook_navigation,
+  .casino_navigation {
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    background: var(--main_white);
+    justify-content: space-around;
+    border: 0;
+    box-shadow: 0px -4px 20px 10px rgba(0, 0, 0, 0.05);
+    padding: 1px 0px;
+  }
+
+  .casino_navigation {
+    justify-content: space-around;
+  }
+
+  .fw_body .fw_bet_section {
+    margin-top: 0px;
+  }
+
+  .prematch_container
+    .event_section
+    .odds_tbl_cat3.odds_tbl_bt_273
+    .odds_trs
+    .under_over_selector_name
+    .selector_name,
+  .prematch_container
+    .event_section
+    .odds_tbl_cat3.odds_tbl_bt_1245
+    .odds_trs
+    .under_over_selector_name
+    .selector_name {
+    margin-top: 0px;
+  }
+
+  .odds_table.event_type_section.bci_4.bci_161.btid_1.event_section
+    .event_type_selections {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_138 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_690 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_82 .event_type_selections_3 {
+    grid-template-columns: 64px 3fr;
+  }
+
+  .bet_types_col.bet_types_col_col1
+    .odds_open
+    .odds_table
+    .odds_trs.event_type_selections_2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_273 .event_type_selections_3,
+  .odds_table.event_type_section.bci_11.bci_35.bci_106.btid_173
+    .event_type_selections,
+  .odds_table.event_type_section.bci_11.bci_35.btid_171 .event_type_selections,
+  .odds_table.event_type_section.bci_36.bci_35.bci_106.bci_7.bci_11.btid_152
+    .event_type_selections {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .odds_open .odds_table.bci_35 .event_type_selections_3 {
+    grid-template-columns: 1fr;
+  }
+
+  .odds_open .odds_table.bci_7.bci_35.bci_106.btid_131,
+  .odds_open .odds_table.bci_99.btid_2512 {
+    display: grid;
+    gap: 8px;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_185 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_167 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_245 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_108 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_106 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_882 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_273 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_58 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_1720 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_581 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_562 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_93 .event_type_selections_3 {
+    grid-template-columns: 64px 1fr 1fr;
+  }
+
+  .odds_open .odds_table.bci_99.btid_2512 .event_type_selections_3 {
+    grid-template-columns: 1fr;
+  }
+
+  .odds_open
+    .odds_table.odds_tbl_bt_1245
+    .event_type_selections_3
+    .under_over_selector_name {
+    left: 40%;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_138 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_690 .event_type_selections_3,
+  .odds_open .odds_table.odds_tbl_bt_82 .event_type_selections_3 {
+    grid-template-columns: 64px 1fr 1fr 1fr;
+  }
+
+  .odds_open .odds_table.bci_35.bci_106.bci_140.btid_140,
+  .odds_open .odds_table.bci_35.btid_2478,
+  .odds_table.bci_11.bci_35.bci_106.btid_92,
+  .odds_table.bci_11.bci_35.bci_106.btid_173,
+  .odds_table.bci_35.btid_2479 {
+    display: grid;
+    gap: 8px;
+  }
+
+  .odds_open .odds_table.bci_36.bci_35.bci_106.bci_7.bci_11.btid_152 {
+    display: grid;
+    gap: 4px;
+  }
+
+  .odds_open
+    .odds_table.bci_35.bci_106.bci_140.btid_140
+    .event_type_selections_3,
+  .odds_open
+    .odds_table.bci_7.bci_35.bci_106.bci_140.btid_80
+    .event_type_selections_3,
+  .odds_open {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .odds_open .odds_table.bcid_27.bcid_36.btid_107 .event_type_selections_2,
+  .odds_open .odds_table.bcid_27.bcid_36.btid_110 .event_type_selections_2,
+  .odds_open .odds_table.bcid_28.bcid_36.btid_160 .event_type_selections_2,
+  .odds_open .odds_table.bcid_36.btid_702 .event_type_selections_2,
+  .odds_open .odds_table.bcid_36.btid_155 .event_type_selections_2,
+  .odds_open .odds_table.bcid_28.btid_163 .event_type_selections_2,
+  .odds_open .odds_table.bcid_68.btid_147 .event_type_selections_2,
+  .odds_open .odds_table.bcid_28.bcid_36.btid_159 .event_type_selections_2,
+  .odds_open .odds_table.bcid_68.bcid_7.btid_66 .event_type_selections_2,
+  .odds_open .odds_table.bcid_27.btid_6 .event_type_selections_2,
+  .odds_open .odds_table.bcid_28.btid_5 .event_type_selections_2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .registration_tbl span.reg_ttl2 {
+    font-size: 0px;
+  }
+
+  .registration_tbl span.reg_ttl2:before {
+    content: "Seja bem-vindo a  Invictosbet, \A sua casa de apostas com as melhores odds e o cassino mais completo do Brasil! \A \A Viva o lado Invictosbet!";
+    font-size: 16px;
+    white-space: pre-wrap;
+    color: var(--main_dark_gray);
+  }
+
+  body.portable-device.skin-120#reg_user_form .registration_tbl,
+  .skin-120 .registration_tbl {
+    border-color: gray;
+    padding: 0px;
+  }
+
+  .reg_v10 .reg_steps_container .reg_steps {
+    background: var(--secondary_white);
+    color: var(--main_dark_gray);
+  }
+
+  #fe_main button.reg_btn {
+    background: var(--main_color) !important;
+    border-radius: 8px !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .reg_error_list:before {
+    border: 0px;
+  }
+
+  .reg_error_list .reg_error_item {
+    padding-right: 24px;
+  }
+
+  .event_section .odds_tbl_cat5 .bt_name_dyn_header,
+  .event_section .odds_tbl_cat5 .event_type_selections > .bts_name_dyn {
+    background: transparent;
+    padding: 4px 0px;
+    color: var(--main_dark_gray);
+    font-weight: 600;
+  }
+
+  .reg_steps_wrapper .reg_steps_container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .skin-120 .reg_v10 .reg_steps_container .checked_step,
+  .skin-120 .reg_v10 .reg_steps_container .reg_steps.selected_step {
+    background-color: var(--main_color);
+  }
+  .reg_v10 .reg_steps_container .reg_steps {
+    border-radius: 99%;
+    width: 50px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_1160 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_1160 .bts_name_dyn {
+    grid-column: 1 / span 3;
+  }
+
+  .odds_open .odds_table.odds_tbl_bt_1160 .event_type_selections_3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .odds_open
+    .odds_table.odds_tbl_bt_1160
+    .event_type_selections_3
+    .selection_box.ev_sel_odd {
+    width: 100%;
+    background: var(--main_color);
+  }
+
+  .odds_open
+    .odds_table.odds_tbl_bt_1160
+    .event_type_selections_3
+    .selection_box.ev_sel_odd
+    a {
+    padding: 4px !important;
+    background: transparent;
+  }
+
+  .odds_open
+    .odds_table.odds_tbl_bt_1160
+    .event_type_selections_3
+    .selection_box.ev_sel_odd {
+    border-radius: 8px;
+  }
+
+  #sports_odds .event_section .event_type_selections div a .selector_name,
+  #sports_odds
+    .event_section
+    .odds_tbl_cat5
+    .event_type_selections
+    .selection_box
+    a
+    .selector {
+    font-size: 9px;
+    color: var(--main_color);
+    font-weight: 600;
+  }
+
+  #sports_odds .event_section .event_type_selections div.bts_name_dyn {
+    background: var(--secondary_white);
+    border-radius: 4px;
+    color: var(--main_dark_gray);
+    font-weight: 500;
+  }
+
+  #sports_odds .event_section .event_type_selections div.bts_name_dyn span {
+    padding: 0px 8px;
+    font-size: 10px;
+  }
+
+  .paym_field table tbody tr:nth-child(1) {
+    display: flex !important;
+    width: 100%;
+  }
+
+  .slip_buttons_area {
+    position: static;
+  }
+
+  .paym_field table tbody tr:nth-child(1) td .title,
+  .paym_field table tbody tr nth-child(1) td div input {
+    width: 100%;
+  }
+
+  .deposit-lobby-page .paym_field_cont table tr td .title,
+  .deposit-lobby-page .paym_field_cont table tr td {
+    width: 100%;
+  }
+
+  .odds_open.bt_id_908 .event_type_selections,
+  .odds_open.bt_id_572 .event_type_selections {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_1530 .event_type_selections,
+  .odds_open.bt_id_827 .event_type_selections,
+  .odds_open.bt_id_1061 .event_type_selections,
+  .odds_open.bt_id_1062 .event_type_selections,
+  .odds_open.bt_id_826 .event_type_selections,
+  .odds_open.bt_id_2050 .event_type_selections,
+  .odds_open.bt_id_2045 .event_type_selections,
+  .odds_open.bt_id_2048 .event_type_selections,
+  .odds_open.bt_id_2018 .event_type_selections,
+  .odds_open.bt_id_2017 .event_type_selections,
+  .odds_open.bt_id_2049 .event_type_selections,
+  .odds_open.bt_id_2016 .event_type_selections,
+  .odds_open.bt_id_2010 .event_type_selections,
+  .odds_open.bt_id_2044 .event_type_selections,
+  .odds_open.bt_id_2031 .event_type_selections,
+  .odds_open.bt_id_2053 .event_type_selections,
+  .odds_open.bt_id_2047 .event_type_selections,
+  .odds_open.bt_id_2056 .event_type_selections,
+  .odds_open.bt_id_2046 .event_type_selections,
+  .odds_open.bt_id_2055 .event_type_selections,
+  .odds_open.bt_id_2030 .event_type_selections,
+  .odds_open.bt_id_1785 .event_type_selections,
+  .odds_open.bt_id_574 .event_type_selections,
+  .odds_tbl_bt_51 .event_type_selections,
+  .odds_tbl_bt_701 .event_type_selections {
+    grid-template-columns: 0.5fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_1788 .event_type_selections,
+  .odds_open.bt_id_2028 .event_type_selections,
+  .odds_open.bt_id_2029 .event_type_selections,
+  .odds_open.bt_id_1784 .event_type_selections,
+  .odds_open.bt_id_2036 .event_type_selections,
+  .odds_open.bt_id_2027 .event_type_selections,
+  .odds_open.bt_id_2037 .event_type_selections {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_896 .event_type_selections,
+  .odds_open.bt_id_634 .event_type_selections {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odd span {
+    font-weight: bold !important;
+  }
+
+  .odds_open.bt_id_915 .event_type_selections,
+  .bci_35.bci_106.btid_86 .event_type_selections {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2445 .odds_trs {
+    grid-template-columns: 1fr 64px !important;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2445
+    .selection_box.ev_sel_odd
+    a {
+    padding: 0px !important;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773
+    .selection_box.ev_sel_odd
+    a {
+    padding: 0px !important;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773 .bts_name_dyn {
+    grid-column: 1 / 3;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773 .odds_trs,
+  .bt_id_1665.btgrp_0 .event_type_selections {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_2084 .bt_title.min {
+    padding: 8px;
+  }
+
+  .odds_open.bt_id_2084 .event_type_selections {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .odds_open.bt_id_2084 .odds_tbl_holder .odds_trs .ev_sel_odd_result a,
+  .odds_open.bt_id_2086 .odds_tbl_holder .odds_trs .ev_sel_odd_result a {
+    justify-content: center !important;
+  }
+  .odds_open .odds_tbl_holder .odds_trs {
+    background-color: var(--third_color);
+    padding: 4px 8px;
+  }
+
+  .odds_open.bt_id_2084 {
+    margin: 4px;
+  }
+
+  .odds_open.bt_id_590 .event_type_selections,
+  .odds_open.bt_id_150 .event_type_selections,
+  .odds_open.bt_id_589 .event_type_selections,
+  .odds_open.bt_id_598 .event_type_selections,
+  .odds_open.bt_id_2118 .event_type_selections,
+  .odds_open.bt_id_2117 .event_type_selections,
+  .odds_open.bt_id_596 .event_type_selections {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_2086 .event_type_selections {
+    grid-template-columns: 2fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_open.bt_id_593 .event_type_selections,
+  .odds_open.bt_id_592 .event_type_selections {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2304
+    .event_type_selections_3
+    .bts_name_dyn {
+    grid-column: 1 / 4;
+  }
+
+  .odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2304
+    .event_type_selections_3
+    a {
+    padding: 0px !important;
+  }
+
+  .selection_box.ev_sel_odd {
+    background: var(--secondary_white) !important;
+  }
+
+  #cboxContent #bs_contentarea {
+    width: 100%;
+    background: var(--button-gradient);
+    border-radius: 16px;
+    padding: 1px;
+    box-shadow: 0px 4px 15px 0px rgba(255, 0, 0, 0.22);
+  }
+
+  .message_content_tbl tbody tr {
+    height: auto !important;
+  }
+
+  .message_content_tbl tbody tr td {
+    padding-bottom: 0px !important;
+    margin: 0px 12px;
+  }
+  .message_content_tbl tbody tr:nth-child(1) td {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .message_content_tbl tbody tr:nth-child(2) td {
+    font-size: 10px;
+    color: #a1a1aa;
+  }
+
+  td.content.full {
+    padding: 0px;
+    background: var(--third_color);
+  }
+
+  .inbox-message-center .read_message_page .section_title_bar {
+    border-radius: 16px 16px 0px 0px;
+    background: var(--third_color);
+  }
+
+  .read_message_page .bs_data_wrapper.bs_filters {
+    border-radius: 0px 0px 16px 16px;
+    background: var(--third_color);
+  }
+
+  .section_title_bar .messages_icon {
+    font-size: 14px;
+  }
+
+  body#fe_body.inbox-message-center #cboxClose {
+    border: 0px !important;
+  }
+
+  .registration_tbl tr:nth-child(2) {
+    padding: 0px;
+  }
+
+  .registration_tbl tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .registration_tbl td.reg_field_name {
+    padding: 0px;
+    color: var(--main_dark_gray);
+    font-size: 12px;
+  }
+
+  .registration_tbl td {
+    padding: 0px;
+  }
+  #verify-cpf {
+    height: 100%;
+    padding: 2px 15px;
+    border-radius: 8px !important;
+  }
+
+  .cpf-input {
+    background: var(--secondary_white) !important;
+  }
+
+  .cpf-input::placeholder {
+    color: #c9c9c9 !important;
+  }
+
+  div.pass_icon:before,
+  div.mail_icon:before,
+  div.usr_nm:before,
+  div.usr_nm:before,
+  span.dt_icon:before {
+    margin-top: 2px;
+    filter: brightness(0.5);
+    border: 0px;
+    width: 16px;
+    background-size: contain;
+  }
+
+  div.mail_icon:before,
+  div.pass_icon:before {
+    left: 4px;
+  }
+
+  .usr_nm.keep-in-line {
+    background: var(--secondary_white) !important;
+    border-radius: 8px !important;
+  }
+
+  .chk_bx_cnt {
+    color: var(--main_dark_gray);
+    font-size: 12px;
+  }
+
+  div.usr_nm.keep-in-line:before {
+    height: 24px;
+  }
+
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    .reg_v11
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]) {
+    border-radius: 8px !important;
+  }
+
+  .login_menu_area_v2
+    .balance_btns_holder
+    .right_menu_btn_container
+    .balance_icon_container,
+  .login_menu_area_v2
+    .balance_btns_holder
+    .right_menu_btn_container
+    .bets_icon_container {
+    filter: brightness(0.5);
+  }
+
+  .balance_text_container,
+  .bets_text_container {
+    color: var(--main_dark_gray);
+  }
+
+  .registration_tbl table {
+    padding: 12px;
+  }
+
+  .registration_tbl .chk_bx {
+    padding-left: 8px;
+  }
+
+  .chk_bx_cnt input:checked ~ .checkmark2 {
+    background: var(--main_color);
+    border: 0px;
+    border-radius: 4px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .message_center_new_messages_container .messages_ico {
+    width: calc(100% - 8px);
+  }
+
+  .skin-120 .mob_header .deposit-cont,
+  .skin-120 .mob_header .call_icon_container,
+  .skin-120 .mob_header .messages_area {
+    background: var(--main_white);
+  }
+
+  .bonus_list_section .bonus_list_header {
+    color: var(--main_dark_gray);
+  }
+
+  .bonus_list_section .bonus_list_header .bonus_list_header_name h3 {
+    font-weight: 600;
+  }
+
+  .no_bonuses_found {
+    color: var(--main_dark_gray);
+    text-align: center;
+  }
+
+  .bonus_list_items_section .bl_item:not(.selected) {
+    color: var(--main_dark_gray);
+    padding-bottom: 6px;
+  }
+
+  .bonus_list_items_section .bl_item.selected {
+    padding-bottom: 6px;
+  }
+
+  .bonus_list_items_section ul {
+    height: 40px;
+  }
+
+  .bonus_list_items_section {
+    padding: 0px;
+    text-align: center;
+  }
+
+  #fe_web_container #fe_main .help_wrap_v2 .help_txt_content {
+    color: var(--main_dark_gray);
+  }
+
+  .message_center_new_messages_container .messages_area {
+    background: transparent !important;
+  }
+
+  .chk_bx_cnt .checkmark2:after {
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+  }
+
+  .help_wrap_v2 ul.nav li a {
+    background: var(--main_color);
+  }
+
+  .help_wrap_v2 ul.nav li a:hover {
+    background: var(--main_color);
+  }
+
+  .form3 .field_errors_notice {
+    right: 0px;
+  }
+
+  .casino_navigation .navigation_block.invictus_round.invictus_round_casino {
+    background: transparent;
+  }
+
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]).maxw,
+  #fe_main:not(:has(.digitain_outer_wrapper)) input[type="submit"].maxw,
+  #fe_main input[type="button"].maxw,
+  button.maxw,
+  select.maxw,
+  textarea.maxw {
+    color: var(--main_dark_gray);
+  }
+
+  .sr-bb .srt-primary-1 {
+    background: var(--primary_white) !important;
+    color: var(--main_dark_gray) !important;
+  }
+
+  .sr-bb .srt-win {
+    background: green !important;
+  }
+
+  .sr-bb .srt-lose {
+    background: red !important;
+  }
+
+  .sr-bb .sr-ba-form__team-value-number {
+    color: var(--main_dark_gray);
+  }
+
+  .sr-bb .srt-fill-primary-1 {
+    fill: var(--primary_white) !important;
+  }
+
+  .promo_link_wrapper .promotion_container {
+    background: var(--primary_white) !important;
+  }
+
+  .promo-tpl-2 .promotion_title,
+  .promo-tpl-2 .bs_icon.arrow:after,
+  .bs_icon.arrow:after,
+  .promo-tpl-2 .promo_desc p {
+    color: var(--main_dark_gray);
+  }
+
+  .promo-tpl-2 .promo_btn,
+  .promo_btn {
+    background: var(--main_color) !important;
+  }
+
+  .bslip_errors,
+  .bslip_generic_warning,
+  .slip_contents .bs_slip_id {
+    background: var(--secondary_color);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px,
+      rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+  }
+
+  .slip_contents .bs_slip_id {
+    font-size: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slip_contents .bs_slip_id:before {
+    content: "Aposta realizada com sucesso";
+    font-size: 14px;
+  }
+
+  .sr-bet-assist-standalone__wrapper.srt-base-1.srm-standalone.srm-no-padding {
+    background: transparent !important;
+  }
+
+  .sr-bb .sr-ba-three-values-comparison__team-name.srm-0 {
+    padding-top: 0px;
+    color: var(--main_dark_gray) !important;
+  }
+
+  .sr-bb.sr-ba-3way.sr-ltr .sr-ba-horizontal-title__wrapper {
+    border-radius: 8px;
+    padding: 4px;
+    background: var(--main_color);
+    margin-bottom: 4px;
+    color: var(--primary_white);
+    opacity: 1;
+  }
+
+  .sr-bb .sr-ba-three-values-comparison__row.srm-probability.srm-0,
+  .sr-bb .sr-ba-three-values-comparison__row.srm-probability {
+    border-radius: 8px;
+    background: var(--primary_white);
+    color: var(--main_dark_gray) !important;
+  }
+
+  .sr-bb .sr-ba-three-values-comparison__probability-unit.srm-0,
+  .sr-bb .sr-ba-three-values-comparison__probability,
+  .sr-ltr.sr-bb .sr-ba-three-values-comparison__team-name.srm-2,
+  .sr-ltr.sr-bb .sr-ba-three-values-comparison__team-name.srm-1,
+  .sr-bb .sr-ba-three-values-comparison__probability-unit.srm-1 {
+    color: var(--main_dark_gray) !important;
+  }
+
+  .my_bets_container .touch_menu li div.selected,
+  .my_bets_container .touch_menu li div:hover {
+    border: 0;
+    color: var(--main_dark_color);
+    background: transparent !important;
+  }
+
+  .betting_slip .event_competition {
+    flex-wrap: nowrap;
+  }
+  .left_menu_area_inner .main_menu {
+    height: auto;
+  }
 }
 
-.mob_header.logged-out {
-  align-items: center;
-  gap: 16px;
-}
-
+/* Responsive */
 @media only screen and (max-width: 375px) {
   .mob_header.logged-out .clear {
     display: none;
@@ -139,3599 +3358,525 @@ body.portable-device #fe_main {
   }
 }
 
-.main_menu {
-  background-color: transparent;
-}
-
-.mob_header .logo_area {
-  height: auto;
-}
-
-.mob_header .log_reg_sec {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-direction: row-reverse;
-}
-.mob_header .log_reg_sec a {
-  text-transform: initial;
-  box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
-    0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02),
-    0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
-    0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
-    0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
-    0px 0px 0px 0px rgba(0, 0, 0, 0.14);
-}
-
-body.portable-device.skin-120 #reg_user_form .registration_tbl, .skin-120 .registration_tbl {
-   padding: 16px 8px;
-}
-
-body#fe_body, body.portable-device #reg_user_form .registration_tbl {
-  background: var(--primary_white)
-}
-
-#fe_web_container #fe_main div.usr_nm input, .skin-120 #fe_web_container #fe_main .registration_container input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]).datepicker, .skin-120.portable-device #fe_web_container #fe_main .registration_container.reg_v10 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]).datepicker, #fe_main .registration_container input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), select, textarea  {
-  margin: 0px;
-  background: var(--secondary_white);
-  border-radius: 8px !important;
-  border: 0px;
-  color: var(--main_dark_gray);
-  padding-left: 38px !important;
-  outline: none;
-  box-shadow: none;
-}
-
-.chk_bx a, .chk_bx div {
-    color: var(--main_dark_gray);
-    font-size: 12px;
-}
-
-.form2 td.reg_field_value {
-  padding: 0px;
-}
-
-span.dt_icon {
-  border: 0px;
-}
-
-div.usr_nm:before, span.dt_icon:before, .form3 div.mail_icon:before, .form3 div.pass_icon:before, .form3 div.telephone_icon:before{
-  filter: brightness(0.5);
-  background-size: 16px;
-  border: 0px;
-  margin: 0px;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-  top: 9px;
-  left: 4px;
-  mask-size: 24px;
-}
-.icon_eye:after {
-    filter: brightness(0.5);
-  background-size: 16px;
-}
-
-.log_reg_sec a:last-child {
-  color: #fff;
-  border-radius: 16px;
-  padding: 1px;
-}
-
-.betslip_bottom_bar {
-  border-bottom: 40px solid var(--gray-3);
-  bottom: 200px;
-}
-
-.btn_right, .btn_left {
-  width: calc(50% - 16px);
-}
-
-.registration_tbl td.reg_field_button.back_button_area {
- display: flex;
- justify-content: space-around;
-  padding-bottom: 8px;
- align-items: center;
-}
-
-.betslip_bottom_bar .search_icon:after {
-  color: var(--main_red);
-}
-
-.betslip_icon {
-  background-image: url("/uploads/files/betslip-icon-png-663d2896cc94f.png");
-}
-
-.skin-120 .sportsbook_menu .selected.menu_item span,
-.sportsbook_container .sportbook_status .sportsbook_status_btn.active a {
-  color: var(--main_red);
-}
-
-.skin-120 .sportsbook_menu {
-  display: none;
-}
-
-.sportsbook_container .sportbook_status {
-  background: var(--secondary_white);
-}
-
-.sportsbook_container .sportsbook_categories {
-  background: var(--primary_white);
-}
-
-.sportsbook_container .sportbook_status .sportsbook_status_btn:hover,
-.sportsbook_container .sportbook_status .sportsbook_status_btn.active {
-  background: transparent;
-}
-
-.sportsbook_container .sportsbook_categories .sportsbook_category,
-.sportsbook_container .sportbook_status .sportsbook_status_btn,
-.sportsbook_container .sportbook_status .sportsbook_status_btn a {
-  color: var(--main_black);
-  border-bottom: 0px;
-  font-weight: 500;
-}
-
-.sportsbook_container .sportsbook_categories .sportsbook_category {
-  padding: 10px
-}
-
-.sportsbook_container .sportsbook_categories .sportsbook_category {
-  background: transparent;
-  min-width: 64px;
-  border-radius: 24px;
-}
-
-.sportsbook_container .sportsbook_categories .sportsbook_category .cat_name {
-  position: relative;
-  z-index: 1;
-}
-
-.selected .sporticon {
-  background-color: var(--main_color);
-}
-
-.sportsbook_days_filtering {
-  border-collapse: unset;
-  display: none;
-}
-
-.sportsbook_filter .single_filter.main {
-  background: var(--primary_white);
-  color: var(--main_color);
-  font-weight: 600;
-}
-
-.sportsbook_filter .single_filter {
-  padding: 12px 4px;
-}
-.sportsbook_filter .single_filter img {
-  width: 24px;
-}
-
-.single_filter.single_filter_19 img, .single_filter.single_filter_5 img, .single_filter.single_filter_57 img, .tst1.single_filter.main img {
-  filter: brightness(0.5);
-} 
-
-.fw_body .fw_bet_section.fw_bet_section_1 .selection_box {
-  border-radius: 8px;
-}
-
-.tst1.single_filter.main img {
-  height: 24px;
-  object-fit: contain
-}
-
-.sportsbook_filter .single_filter, .sportsbook_filter .filter_submenu a {
-  background-color: var(--primary_white);
-  color: var(--main_dark_gray);
-  font-size: 12px;
-}
-
-.sportsbook_filter .filter_submenu a {
-  border-bottom: 1px solid var(--main_light_gray);
-  padding: 10px 20px;
-}
-
-.sportsbook_days_filtering .days_filter {
-  padding: 11px 5px;
-}
-
-.league_data {
-  /* padding: 4px; */
-} 
-
-body.wide .league_events_wrapper {
-  margin-top: 4px;
-  width: 100%;
-}
-
-.event_filter a {
-  color: var(--main_dark_gray)
-}
-
-#sports_odds .league_events_wrapper .sb_sec_title {
-  background: var(--primary_white);
-  color: var(--main_dark_gray);
-  font-weight: 500;
-  height: 40px !important;
-  width: 100%;
-  border: 0;
-  border-radius: 16px 16px 0px 0px
-}
-
-.sportsbook_container
-  .sportsbook_categories
-  .sportsbook_category
-  .cat_name
-  span {
-  font-weight: bold;
-}
-
-#sports_odds .sb_sec_title {
-  padding: 0px;
-}
-
-.swiper-backface-hidden .swiper-slide {
-  padding: 6px;
-  width: calc(100vw - 12px) !important;
-}
-
-.featured_widget_container {
-  background: var(--primary_white);
-  border-radius: 16px;
-}
-
-#fe_body .scroll_up_btn.btn_general {
-  margin: 16px 0px;
-  background: var(--main_color);
-}
-
-.go_back_btn {
-  left: 0px;
-}
-
-.go_back_btn:after {
-  top: 8px;
-  background-color: gray;
-}
-
-.sports_col .slt_info {
-  height: 40px !important;
-}
-
-.go_back_btn:before {
-  line-height: 40px;
-}
-
-.sportsbook_container .status_title {
-  background-color: var(--secondary_white);
-  margin-bottom: 0px !important;
-  padding: 12px 8px;
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section {
-  background-color: var(--main_white);
-  border-bottom: 0px !important;
-  padding: 8px 4px;
-  flex-direction: column;
-  margin-bottom: 2px;
-}
-
-.sportsbook_container .status_title span {
-  color: var(--main_dark_gray);
-  font-size: 14px;
-}
-
-.influencers_container {
-  grid-column: 1 / span 3;
-  height: 100px;
-  display: none;
-}
-
-.seal_container {
-  grid-column: 1 / span 3;
-  margin: 0px;
-  padding: 16px 0px;
-  border: 0;
-  background: var(--main_color);
-}
-
-.footer_payments {
-  grid-column: 1 / span 3;
-  background: var(--main_dark_color);
-  padding: 16px 0px;
-}
-
-.footer_payments .inner {
-  background: transparent;
-  padding: 0px;
-}
-
-.footer_payments:after {
-  display: none;
-}
-
-.desktop_icon_wrapper {
-  grid-column: 1 / span 3;
-  padding: 16px 0px 0px 0px;
-  background: var(--main_color);
-}
-
-.desktop_icon_wrapper .desktop_icon {
-  height: 48px;
-}
-
-.desktop_icon_wrapper .desktop_icon a {
-  text-align: center;
-  color: var(--main_white);
-}
-
-.footer_info {
-  background: var(--main_color);
-  padding: 0px 0px 12px 0px;
-}
-
-.footer_info .foot_info_txt {
-  font-size: 12px;
-}
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box {
-  border-radius: 8px;
-  height: 40px;
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_odds_selectors {
-  padding: 0px;
-  width: 100%;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box {
-  background-color: var(--secondary_white);
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_event_section {
-  padding: 8px;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_event_section
-  .spn_event_details {
-  display: flex;
-  margin-top: 0px;
-  flex-direction: column;
-  grid-column: 3;
-  position: relative;
-  bottom: 20px;
-  /* gap: 8px; */
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_more_options {
-  margin-bottom: 0px;
-  background: var(--grey_d_20);
-  display: flex;
-  flex-wrap: wrap;
-  width: 46%;
-  margin: 4px 8px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding: 6px;
-  justify-content: center;
-  display: none;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_more_options:nth-child(3) {
-  margin-right: 4px;
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_more_options a {
-  color: #fff;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_more_options
-  a
-  > div {
-  gap: 6px !important;
-}
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_more_options
-  a
-  > div
-  > svg {
-  fill: #fff;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  .selector
-  span,
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  .odd
-  span {
-  color: #fff;
-  font-size: 12px;
-  display: flex;
-  color: var(--main_color);
-  font-weight: 700;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  .odd
-  span {
-    color: var(--main_dark_gray);
-   position: relative;
-    right: 8px
+/* Página de Promoção */
+#fe_body.promotions-main-page {
+  #fe_main {
+    background: var(--secondary_white) !important;
   }
+}
 
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  .selector
-  span {
-   position: relative;
-    right: -16px
+/* Página de Deposito/Saque*/
+#fe_body.deposit-lobby-page,
+#fe_body.withdraw-lobby-page {
+  #fe_main .paym_info {
+    color: var(--main_dark_gray);
+    font-weight: 500;
   }
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_event_section
-  .spn_competitor {
-  margin-bottom: 4px;
-  grid-column: 1 / 3;
-  height: 14px;
 }
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_event_section {
-  width: 100%;
-}
-
-#sports_container {
-  /* padding: 4px; */
-}
-
-body .single_event_sle_info,
-body .single_event_dt {
-  padding: 8px 0px;
-}
-
-.odds_table a {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  max-height: 78px;
-  gap: 16px;
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-.single_event_holder.sport_1 .single_event_info {
-  background: var(--primary_white);
-  color: var(--main_dark_gray);
-}
-
-body .single_ev_btc_wrapper.event_filter a {
-  border-bottom: 0px;
-  margin: 0px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-}
-
-body .single_ev_btc_wrapper.event_filter a.selected {
-  border-bottom: 0px;
-  border-top: 0px;
-  padding: 10px;
-  z-index: 1;
-  position: relative;
-  color: var(--main_color);
-}
-body .single_ev_btc_wrapper.event_filter a.selected:before {
-  content: "";
-  display: flex;
-  height: 47px;
-  width: 100%;
-  position: absolute;
-  border-radius: 16px;
-  z-index: -1;
-  top: 0px;
-  left: 0px;
-}
-
-body .single_ev_btc_wrapper.event_filter a {
-  border-bottom: 0px;
-  border-top: 0px;
-  color: var(--main_dark_gray);
-}
-
-body .single_ev_btc_wrapper.event_filter a span {
-  padding: 0px;
-}
-
-body .single_ev_btc_wrapper.event_filter.show a:first-child span {
-  display: none;
-}
-
-
-.home_sections_banners .home_sections_boxes {
-    padding: 0px;
-}
-
-.bottom_banner, .home_boxes_nav{
-    padding: 0px;
-    margin: 0px;
-}
-
-.btn_cnt {
-    background: var(--main_white)
-}
-
-.sportsbook_navigation .betstlip_full .betslip_counter {
-  padding: 1px 6px;
-  right: 12px;
-}
-
-body .single_event_close_area, .single_event_holder .close_league {
-  height: 20px;
-  width: 20px;
-  background: var(--secondary_white);
-}
-
-#fe_footer .logo {
-  background-color: var(--main_color);
-  height: 100%;
-  background-image: none !important;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 0px;
-  margin: 0px;
-}
-
-#fe_footer .logo:after {
-  content: "";
-  background-image: url(/uploads/files/gordon-moddy-png-6672fa2e89a99.png);
-  display: flex;
-  width: 100%;
-  height: 64px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#fe_footer .logo:before {
-  content: "";
-  background-image: url(/uploads/files/invictos-logo-head-mobile-png-6672fa2a8c95a.png);
-  display: flex;
-  width: 100%;
-  height: 64px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer_nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 0px;
-}
-.footer_nav a {
-  padding: 4px;
-  text-align: start;
-}
-
-.footer_links_sec {
-  margin-bottom: 0px;
-  background-color: var(--main_dark_color);
-  padding: 24px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-#fe_footer .age_rest,
-.footer_links_sec:before {
-  display: none;
-}
-
-#sports_odds .event_section .event_type_title {
-  padding: 8px 10px;
-  text-align: start;
-  background: transparent;
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-.single_event_odds .odds_table {
-  padding: 10px;
-}
-
-.event_section .event_type_title span {
-  font-weight: 500;
-}
-
-.single_event_odds
-  .odds_table.odds_tbl_cat3.odds_tbl_bt_1644
-  .event_type_selections_3,
-.single_event_odds
-  .odds_table.odds_tbl_cat3.odds_tbl_bt_1648
-  .event_type_selections_3 {
-  grid-template-columns: 1fr 1fr;
-}
-
-#sports_odds .event_section .event_type_selections div a {
-  border-right: 0px solid var(--main_color);
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  flex-direction: row;
-  background: transparent;
-  height: 100%;
-  padding: 8px 4px;
-}
-
-.event_section .odds_trs .ev_sel_odd_result.selected {
-  background: var(--selectOdd) !important;
-}
-.event_section .odds_trs .ev_sel_odd_result.selected a span {
-  color: var(--main_black) !important;
-}
-
-#sports_odds .event_section .event_type_selections div a .selector_name {
-  color: #fff;
-  margin-bottom: 3px;
-  font-weight: 500;
-  font-size: 10px;
-}
-
-#sports_odds .event_section .event_type_selections div a .selecter_odd {
-  font-weight: 700;
-}
-
-.event_section .odds_trs .ev_sel_odd_result.selected a span {
-  color: var(--main_black);
-}
-
-#sports_odds .event_section .event_type_selections div {
-  background: transparent;
-  width: 100%;
-  border-radius: 6px;
-}
-
-.sr-bb .srt-base-2 {
-  background-color: var(--main_color) !important;
-  color: #fff !important;
-  border-radius: 8px;
-}
-
-.sr-tabs.srct-tabs.srt-base-2.srt-elevation-1 {
-  background: var(--secondary_white) !important;
-}
-
-.sr-bb .sr-tabs-tab__indicator.srm-is-active {
-  color: var(--main_red) !important;
-}
-
-.sr-bb .sr-cb-market-list__list-wrapper {
-  background-color: var(--third_color) !important;
-}
-
-.sr-bb .sr-tabs__flexcontainer {
-  background: var(--secondary_white)
-}
-
-.srct-tab--active .sr-tabs-tab__content.srct-tab__content{
-  filter:brightness(1) !important;
-}
-
-.sr-tabs-tab__content.srct-tab__content {
-  opacity: 1;
-  filter: brightness(0.3);
-}
-
-.srct-tab--active span {
-  color: var(--main_red) !important;
-}
-
-.sr-bb .sr-tabs-tab__indicator__content {
-  border: 0;
-}
-
-.sr-bb .sr-bb {
-  background: var(--third_color) !important;
-}
-
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(2)
-  > div
-  > div
-  > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
-  > div.sr-cb-market-view__slides
-  > div
-  > div:nth-child(1)
-  > div
-  > div
-  > div.sr-scrollbars__container
-  > div:nth-child(1)
-  > div
-  > div
-  > div.sr-cb-outcome-grid__bet-assist
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div:nth-child(2)
-  > div.sr-ba-horizontal-title__wrapper.srt-text-secondary.srm-is-uppercase {
-  margin-bottom: 8px;
-}
-
-.sr-bb .sr-cb-bet-builder-odds__wrapper {
-  padding: 8px;
-}
-
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(2)
-  > div
-  > div
-  > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
-  > div.sr-cb-market-view__bet-builder
-  > div
-  > div
-  > div
-  > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating
-  > div
-  > div.sr-cb-betbuilder-animate__button
-  > div,
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(1)
-  > div
-  > div.sr-cb-market-list__bet-builder
-  > div
-  > div
-  > div
-  > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
-  > div
-  > div.sr-cb-betbuilder-animate__button
-  > div,
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(1)
-  > div
-  > div.sr-cb-market-list__bet-builder
-  > div
-  > div
-  > div
-  > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
-  > div
-  > div.sr-cb-betbuilder-animate__outcome-list
-  > div
-  > div
-  > div:nth-child(1)
-  > div
-  > div {
-  padding: 4px;
-}
-
-.sr-bb .sr-cb-button__wrapper:after {
-  content: "Adicionar ao bilhete";
-  color: #fff !important;
-  opacity: 1;
-  text-align: center;
-  position: static;
-}
-
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(2)
-  > div
-  > div
-  > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
-  > div.sr-cb-market-view__bet-builder
-  > div
-  > div
-  > div
-  > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating
-  > div
-  > div.sr-cb-betbuilder-animate__button
-  > div
-  > div
-  > div {
-  display: none;
-}
-
-#sports_odds
-  > div
-  > div.sports_scroll_single_event
-  > div
-  > div.single_event_odds
-  > div
-  > div.bet_types_cols_holder
-  > div
-  > div
-  > div
-  > div
-  > div
-  > div.sr-bb.sr-cb-main-content.sr-ltr
-  > div
-  > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
-  > div
-  > div:nth-child(1)
-  > div
-  > div.sr-cb-market-list__bet-builder
-  > div
-  > div
-  > div
-  > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating.srm-is-top.srm-is-market
-  > div
-  > div.sr-cb-betbuilder-animate__button
-  > div
-  > div {
-  font-size: 13px;
-  text-align: center;
-}
-
-#bslip_content, body #sports_slip {
-  background: var(--secondary_white);
-  z-index: 996;
-}
-
-body .bs_title {
-  background: var(--primary_white);
-  color: var(--main_dark_gray);
-  margin-top: 3px;
-}
-
-body .bs_overlay.show_betslip,
-body .slip_contents,
-body .slip_stake_area,
-body .slip_stake_area .clear_bslip,
-#bslip_content .slip_selections_area:not(:empty) {
-  background-color: var(--secondary_white) !important;
-}
-
-body #bslip_content .bslip_selection_tbl tr,
-body td.slip_sel_col_clear,
-#bslip_content .bslip_selection_tbl {
-  background-color: transparent !important;
-  color: var(--main_dark_gray);
-}
-
-body #bslip_content .slip_tabs {
-  display: none;
-}
-
-body #bslip_content .slip_sel_row.last_ev_row td {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-
-/* #bslip_content .bslip_selection_tbl td {
-padding-top: 4px;
-} */
-
-.slip_event_info_selector span {
-  padding: 0px 10px 0px 10px;
-}
-
-.no_selections_div {
-  border-radius: 16px;
-  border: 1px solid var(--main_red);
-  background: var(--main_color);
-}
-
-body #bslip_content .close_btn {
-  background-color: transparent !important;
-  font-weight: bold;
-}
-#bslip_content .slip_selections_area:not(:empty) {
-  background-color: var(--primary_white) !important;
-  margin: 8px;
-  padding: 4px;
-  box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 6px 2px;
-  border-radius: 8px;
-  overflow-y: auto;
-  max-height: 250px;
-  height: auto;
-}
-
-body #bslip_content td.slip_sel_col_odd span{
-  color: var(--main_dark_gray)
-}
-
-#bslip_content .slip_selections_area .teams {
-  padding-top: 6px;
-  color: var(--main_dark_gray);
-}
-
-body #bslip_content .bslip_selection_tbl tr .selname {
-  gap: 4px;
-  align-items: flex-start;
-}
-body #bslip_content .bslip_selection_tbl tr .selname i {
-}
-
-.clear_bslip a {
-  background-color: var(--main_color);
-  border-radius: 8px;
-  width: 20px;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
-}
-.clear_bslip a span {
-  display: none;
-}
-
-.clear_bslip a:before {
-  content: "\f1f8";
-  color: #fff;
-  font-family: "FontAwesome";
-}
-
-#bslip_content .bslip_selection_tbl tr.spacer {
-  display: none;
-}
-
-
-body .slip_buttons_area {
-  background: var(--primary_white);
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  gap: 4px;
-  position: fixed;
-  bottom: 0;
-}
-
-.not-logged-in .slip_buttons_area {
-  color: var(--main_dark_gray);
-  line-height: 24px;
-}
-
-.not-logged-in .slip_buttons_area a {
-  border: 0 !important;
-  padding: 4px;
-  font-size: 16px !important;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px 0px;  
-  color: var(--main_dark_gray);
-}
-
-
-body #bslip_info_area {
-  padding: 0px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px 0px;
-  background: var(--primary_white);
-  color: var(--main_dark_gray)
-}
-
-body #bslip_info_area table {
-  border-spacing: 0px;
-}
-
-body #bslip_info_area table tbody {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 8px 16px;
-  align-items: center;
-  gap: 8px;
-}
-
-body #bslip_info_area table tbody .odds_row,
-body #bslip_info_area table tbody .bet_row {
-  box-sizing: border-box;
-  display: flex;
-}
-
-body #bslip_info_area table tbody .odds_row {
-  width: 100%;
-}
-
-body #bslip_info_area table tbody .bet_row {
-  width: 100%;
-  justify-content: flex-end;
-  gap: 4px;
-}
-
-body #bslip_info_area .stake_field {
-  padding-left: 8px !important;
-}
-
-body #bslip_info_area table tbody .bet_row .sba_val input::placeholder {
-  color: var(--main_dark_gray) !important;
-}
-
-body #bslip_info_area table tbody .bonus_row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding-right: 4px;
-}
-
-#bslip_info_area .sba_txt {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-body #bslip_info_area table tbody tr:nth-child(4) {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-body #bslip_info_area table tbody tr:nth-child(4) td:nth-child(1) span {
-  display: none;
-}
-
-body #bslip_info_area table tbody tr:nth-child(4) td:nth-child(1):before {
-  content: "Ganhos potenciais";
-  font-size: 14px;
-  color: var(--main_dark_gray);
-}
-
-body #bslip_info_area table tbody tr:nth-child(4) .sba_info {
-  width: 130px;
-}
-
-body #bslip_info_area table tbody .odds_row .sba_val {
-  width: 100px;
-}
-
-.odds_row .sba_val span {
-  background: transparent;
-  color: var(--selectOdd);
-  text-align: right;
-}
-
-body .mm_win_dv .mm_win_val {
-  border-radius: 8px;
-  text-align: center;
-  background: transparent;
-  color: var(--main_color);
-  text-align: right;
-}
-
-.fa-remove:before,
-.fa-close:before,
-.fa-times:before {
-  content: "\f1f8";
-  color: var(--main_color);
-}
-
-body.login .content_container {
-  padding: 0px 0px 20px 0px;
-  background: var(--primary_white);
-}
-
-
-body.login .page_sub_tt {
-  padding: 12px 0px 0px 0px;
-  font-size: 0px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.content_container .txt p {
-  margin-top: 0px;
-  font-style: normal;
-}
-
-body.login .page_sub_tt:before {
-  content: "";
-  background-image: url(/uploads/files/invictos-logo-black-mobile-png-6675ab650b7fe.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  color: var(--main_dark_gray);
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  display: flex;
-  width: 100%;
-  height: 48px;
-}
-
-.login_page_container form {
-  padding: 8px 10px;
-}
-
-.content_container .txt a:nth-of-type(1) {
-  color: var(--main_dark_gray) !important;
-}
-
-.txt > a:first-child {
-  position: relative;
-  bottom: 90px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  right: 20px;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-}
-
-.txt > p {
-  font-size: 0px;
-}
-
-.txt > p:before {
-  content: "Ainda não tem uma conta? ";
-  font-size: 12px;
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-.txt > p a {
-  font-size: 0px !important;
-}
-
-.txt > p a:before {
-  content: "Criar uma conta grátis";
-  font-size: 12px;
-  color: var(--main_green);
-  text-decoration: underline;
-  font-style: normal;
-}
-
-.deposit-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), .withdraw-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]) {
-  background: var(--secondary_white);
-  border-radius: 8px;
-}
-
-.login_page_container form .login_page_row .input_fld input:nth-child(1),
-.login_page_container form .login_page_row .input_fld input:nth-child(2) {
-  background: var(--secondary_white) !important;
-  border: 0px !important;
-  border-radius: 8px !important;
-}
-
-.login_page_container form .login_page_row .input_fld input:placeholder {
-  color: var(--main_dark_gray) !important;
-}
-
-.login_page_container .login_page_row {
-  display: flex;
-  flex-direction: column
-}
-
-.login_option_switch.button {
-  background: var(--main_color);
-  color: var(--main_white);
-  font-weight: bold;
-  margin-top: 0px;
-}
-.login_page_row button.login_btn a:first-child {
-  border-radius: 16px;
-  margin-top: 0px;
-}
-.login_page_row button.login_btn a:last-child {
-  color: #fff;
-  border-radius: 36px;
-  background: linear-gradient(180deg, #000000 0%, #b60707 100%);
-  box-shadow: 0px 4px 15px 0px rgba(255, 0, 0, 0.22);
-}
-.login_page_row button.login_btn {
-  background: var(--main_color);
-  color: #fff;
-  font-weight: normal;
-  border-radius: 8px;
-  margin-top: 32px;
-}
-.login_page_row a:last-child::before {
-  content: "entrar";
-  width: 500px;
-  height: 40px;
-  border-radius: 36px;
-  margin-bottom: 1px;
-}
-.login_option_switcher {
-  padding: 0 35px;
-}
-
-.login_menu_area {
-  top: 70px;
-}
-
-.login_area_header .right_sec {
-  display: none;
-}
-
-.login_menu_area {
-  top: 60px;
-  background: var(--primary_white);
-}
-
-.login_area_header .right_sec {
-  display: none;
-}
-
-.login_menu_area .login_area_header {
-  display: flex;
-  justify-content: center;
-  background: var(--main_white);
-  border: 0px;
-  color: var(--main_color);
-  font-weight: 500;
-}
-
-.login_menu_area_v2 .balance_sec {
-  background: var(--secondary_white);
-}
-
-.login_menu_area_v2 .header_sec_loggedin_menu_v2 {
-  background: var(--main_white);
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-.login_menu_area .ttl_sec,
-.login_menu_area .profile_sec,
-.sec_menu a {
-  background: transparent;
-  color: var(--main_dark_gray);
-}
-
-.login_menu_area_v2 .balance_btns_holder .balance_container,
-.login_menu_area_v2 .balance_btns_holder .open_slip_container {
-  background: transparent;
-  border: 0px;
-}
-
-.login_menu_area .ttl_sec {
-  display: flex;
-  align-items: center;
-  height: 48px;
-}
-
-.login_menu_area .ttl_sec #text {
-  font-size: 20px;
-}
-
-.login_menu_area a.logout_link {
-  background: var(--main_color);
-  font-weight: bold;
-  border-radius: 0px;
-  color: var(--main_white);
-  width: 84%;
-  margin-bottom: 20px;
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0.00), 0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02), 0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07), 0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12), 0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13), 0px 0px 0px 0px rgba(0, 0, 0, 0.14);
-}
-
-.main_menu {
-  background: var(--main_white);
-  display: flex;
-  height: 64px;
-}
-
-.main_menu ul li {
-  border: 0px;
-  filter: brightness(0.40);
-  height: 64px;
-}
-.left_menu_area_v2 .main_menu ul li a,
-.main_menu ul li a:hover,
-.main_menu ul li a:visited {
-  margin-left: 0px;
-}
-
-.home_boxes_nav .hp_box a.all_sports,
-.home_boxes_nav .hp_box a.live_bet {
-  background-color:  var(--odds_aumentadas_bg);
-}
-
-.main_menu ul li a, .main_menu ul li a:hover, .main_menu ul li a:visited {
-  width: 92px;
-  height: 64px;
-}
-
-.top_menu li a:before {
-  background-size: 20px !important;
-}
-
-.main_menu ul li a {
-  font-size: 11px !important;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_event_section
-  .spn_competitor
-  .score
-  span {
-  color: var(--main_dark_gray);
-      font-weight: 500;
-}
-
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_event_section
-  .spn_competitor
-  .competitor
-  span {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.mob_header .deposit-cont {
-  min-width: 65px;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  background: transparent !important;
-  position: relative;
-  right: 0px;
-  align-items: flex-end;
-}
-.mob_header .deposit-cont .deposit_ico {
-  mask-image: none;
-  background-color: transparent;
-  width: 100%;
-  max-width: 100px;
-}
-
-.mob_header .deposit-cont .deposit_ico::before {
-  content: "Depositar";
-  font-size: 9px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 0px 4px;
-  top: 0px;
-  color: var(--main_dark_color) !important;
-  background-color: var(--main_white);
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 6px;
-  border-radius: 10px;
-  box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0.00), 0px 32.853px 13.067px 0px rgba(0, 0, 0, 0.02), 0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07), 0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12), 0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13), 0px 0px 0px 0px rgba(0, 0, 0, 0.14);
-}
-
-.ttl_sec:before {
-  height: 32px;
-  top: 0px;
-}
-
-div.panel_title_bar,
-td.panel_title_bar > div {
-  background-color: var(--secondary_white);
-}
-
-div.panel_title_bar p {
-  color: var(--main_dark_gray);
-}
-
-#bslip_content .slip_selections_area .teams .competitor1,
-#bslip_content .slip_selections_area .teams .competitor2 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.bs_search_form.full .bs_search_form_wrapper {
-  background-color: var(--primary_white);
-    color: var(--main_dark_gray);
-}
-
-.profile_tbl tr:nth-child(1) td:nth-child(2),
-.profile_tbl tr td:nth-child(2) {
-  padding: 0px;
-}
-
-#fe_main:not(:has(.digitain_outer_wrapper)) select {
-  width: 100%;
-  background: var(--secondary_white) !important;
-  border-bottom: 0px !important;
-  color: var(--main_gray_dark) !important;
-  padding-left: 12px !important;
-  font-size: 12px;
-}
-
-#fe_main:not(:has(.digitain_outer_wrapper)) input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]).datepicker, #fe_main:not(:has(.digitain_outer_wrapper)) input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]).txt_time, #fe_main #bslip_content .sba_val:not(:has(.digitain_outer_wrapper)) input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), textarea {
-  color: var(--main_dark_gray) !important;
-  border-bottom: 0px !important;
-  padding-left: 12px !important;
-  background: var(--secondary_white) !important;
-    
-}
-
-.bs_search_form .bs_search_form_wrapper > table td {
-    font-style: normal;
-}
-
-#fe_main .profile_tbl input {
-  background: var(--secondary_white) !important;
-  border-bottom: 0px !important;
-}
-
-#fe_main button.update {
-  border-radius: 8px;
-  background: var(--main_color);
-}
-
-select option {
-  color: var(--main_dark_gray);
-  background: var(--secondary_white);
-}
-
-.profile_tbl tr td {
-  font-style: normal !important;
-}
-
-.left_menu_area .main_menu {
-  flex-direction: column;
-}
-
-.left_menu_area .main_menu #nav {
-  background: var(--main_white);
-}
-
-.left_menu_area_v2 .main_menu #nav_2 ul li a {
-  border-bottom: 0;
-}
-
-.left_menu_area_v2 .main_menu #nav_2 {
-  height: 100%;
-  background-color: var(--main_white);
-}
-
-.left_menu_area_v2 .main_menu #nav_2 ul .offers_link,
-.left_menu_area_v2 .main_menu ul.nav_2_menu li.offers_link a {
-  background: var(--main_white);
-  color: var(--main_white);
-  filter: brightness(1);
-}
-.left_menu_area .main_menu .top_menu li {
-  background: transparent;
-}
-
-.left_menu_area .main_menu .top_menu li a {
-  border-right: 0px;
-  background: transparent;
-}
-
-.left_menu_area_v2 .left_menu_area_inner {
-  background: var(--main_white);
-}
-
-#fe_header #set_menu_div .lang_dropdown {
-  background: var(--secondary_white);
-  color: var(--main_dark_gray);
-  border-radius: 8px
-}
-
-.deposit-lobby-page .payment_method_list,
-.withdraw-lobby-page .payment_method_list {
-    background-color: var(--secondary_white);
-}
-
-.deposit-lobby-page .payment_method_list li a img, .withdraw-lobby-page .payment_method_list li a img {
-    display: none;
-}
-
-#payment_tab_45 {
-    background: var(--secondary_white);
-}
-
-#payment_tab_45:before {
-    content: "";
-    background-image: url(/uploads/files/anyspace-payment-png-666372232059c.png);
-    height: 64px;
-    width: 100%;
-    background-repeat: no-repeat;
-  background-size: contain;
-    display: flex;
-}
-
-.deposit-lobby-page #fe_main .paym_info, .withdraw-lobby-page #fe_main .paym_info {
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-.deposit-lobby-page .paym_field_cont table tr td .title, .deposit-lobby-page .paym_field_cont table tr td .field , .withdraw-lobby-page .paym_field_cont table tr td .title, .withdraw-lobby-page .paym_field_cont table tr td .field {
-    color: var(--main_dark_gray);
-}
-
-.deposit-lobby-page #fe_main .paym_field_cont, .withdraw-lobby-page #fe_main .paym_field_cont {
-  background: var(--primary_white)
-}
-
-.deposit-lobby-page .payment_method_list li a.payment_selected, .withdraw-lobby-page .payment_method_list li a.payment_selected {
-  background: var(--main_color);
-  border-radius: 16px;
-  margin: 4px;
-  padding: 4px;
-}
-
-#payment_tab_98:before {
-  content: "";
-  background-image: url(/uploads/files/anyspace-payment-png-666372232059c.png);
-  background-repeat: no-repeat;
-  display: flex;
-  width: 100%;
-  height: 64px;
-  background-size: 80px;
-  background-position: center;
-}
-
-.deposit-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input.amount_holder:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), .deposit-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input.payfix_amount:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), .withdraw-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input.amount_holder:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]), .withdraw-lobby-page #fe_web_container #fe_main .paym_field_cont table tr td input.payfix_amount:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]) {
-  background: var(--secondary_white);
-  border-radius: 8px 0px 0px 8px;
-}
-
-.deposit-lobby-page #fe_main .mp_btn_cont button.mp_btn, .withdraw-lobby-page #fe_main .mp_btn_cont button.mp_btn {
-  border-radius: 8px;
-  background: var(--main_color)
-}
-
-.deposit-lobby-page .extra_info_holder, .withdraw-lobby-page .extra_info_holder, .deposit-lobby-page .currency_holder, .withdraw-lobby-page .currency_holder {
-  background: var(--main_color);
-  border-radius: 0px 8px 8px 0px;
-  font-weight: bold;
-  color: var(--main_white);
-}
-
-
-.deposit-lobby-page .payment_method_list li a span, .withdraw-lobby-page .payment_method_list li a span{
-    color: var(--main_dark_gray) !important;
-    font-weight: bold;
-     display: none;
-}
-
-.top_menu a:before {
-  margin-bottom: -4px;
-  top: 4px;
-}
-
-.left_menu_area_v2 .main_menu #nav_2 ul li a span, #fe_header .lang_dropdown_flags:after {
-  color: var(--main_dark_gray);
-}
-
-.skin-120 .section_title_bar {
-  background: var(--secondary_white);
-  color: var(--main_dark_gray);
-  display: flex;
-}
-
-.title_text {
-    color: var(--main_dark_gray);
-}
-
-.fep37037 .section_title_bar .bs_icon {
-  filter: brightness(0.5);
-  display: block
-}
-
-#bs_contentarea .main_title_bar {
-  background: var(--main_color);
-  margin: 0px;
-  padding: 4px 10px;
-}
-
-.main_title_bar {}
-
-.balance_page .ammount {
-  color: #fff;
-  margin-left: 8px;
-}
-
-.section_title_bar {
-  background: var(--secondary_color);
-}
-
-.skin-120 .fields_container {
-  background: var(--primary_white);
-  color: var(--main_dark_gray);
-}
-
-.fep37037 .fields_container .field_text {
-  color: var(--main_dark_gray);
-}
-
-.fep37037 .fields_container .ammount.field_text {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.image-additional-input-container select,
-.image-additional-input-container textarea {
-  background: var(--secondary_white) !important;
-}
-
-.my_bets_container .status_container,
-.my_bets_container .date_container {
-  padding: 0px;
-  background: var(--secondary_white) !important;
-}
-
-.my_bets_container .touch_menu li.date-icon {
-  display: flex;
-  align-items: center;
-}
-
-body .my_bets_container .touch_menu {
-  background: var(--secondary_white);
-  height: 64px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  border-radius: 0px;
-}
-
-.touch_menu.date-style.date_filter_menu li {
-  align-items: center;
-  display: flex;
-}
-
-.touch_menu.date-style.date_filter_menu li div {
-  padding: 0px;
-}
-
-.fa-clock-o:before {
-  color: var(--main_color)
-}
-
-#fe_main .update, #fe_main .search, #fe_main .add, #fe_main .delete, #fe_main .btn_general, #fe_main .download {
-    border-radius: 8px;
-    background-color: var(--main_color) !important;
-}
-
-body .my_bets_container .touch_menu.date-style li div.selected,
-body .my_bets_container .touch_menu.date-style li div:hover {
-  color: var(--main_red);
-  border: 0;
-}
-
-body .my_bets_container .bet_slips_container .betting_slip .betting_left,
-body .my_bets_container .bet_slips_container .betting_slip .betting_right {
-  background: var(--secondary_white);
-  color: var(--main_dark_gray);
-}
-
-body .my_bets_container .bet_slips_container .betting_slip .betting_right {
-  border-top-right-radius: 16px;
-}
-
-body .my_bets_container .bet_slips_container .betting_slip .betting_left {
-  border-top-left-radius: 16px;
-}
-
-body .my_bets_container .bet_slips_container .betting_slip {
-   box-shadow: 0px 51.147px 14.187px 0px rgba(0, 0, 0, 0),
-    0px 8.853px 13.067px 0px rgba(0, 0, 0, 0.02),
-    0px 18.293px 11.2px 0px rgba(0, 0, 0, 0.07),
-    0px 8.213px 8.213px 0px rgba(0, 0, 0, 0.12),
-    0px 1.867px 4.48px 0px rgba(0, 0, 0, 0.13),
-    0px 0px 0px 0px rgba(0, 0, 0, 0.14);
-}
-
-.betting_slip .light {
-  font-weight: 400
-}
-
-body .my_bets_container .bet_slips_container .betting_slip .betting_info {
-  background: var(--main_color);
-}
-
-.betting_slip .betting_slip_section .half_right .res_ev_RUNNING {
-  font-weight: bold;
-  color: var(--selectOdd);
-}
-
-.portable-device .notifications_tbl .confirm_row .notice, .portable-device .notifications_tbl .warning_row .notice {
-  border-radius: 8px;
-}
-
-.sporticon {
-  width: 24px;
-  height: 20px;
-  background: var(--main_gray);
-}
-
-.betting_slip .bet_amount {
-  margin: 4px 0px 10px 0px;
-  font-weight: 400;
-}
-
-.my_bets_container .touch_menu li {
-  height: 100%;
-}
-
-.my_bets_container .touch_menu li div {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px 4px !important;
-}
-
-.my_bets_container .touch_menu li div span {
-  position: relative;
-  top: 24px;
-  color: var(--main_dark_gray)
-}
-
-
-.my_bets_container .touch_menu li div.selected span {
-  color: var(--main_color)
-}
-
-.my_bets_container .touch_menu li div.selected {
-  background: transparent !important;
-  color: var(--main_red);
-}
-
-body .single_ev_btc_wrapper.event_filter.show {
-  height: 48px;
-  gap: 12px;
-  background: var(--main_white);
-  box-shadow: 6px 4px 14px 4px rgba(227, 227, 227, 0.92);
-}
-
-body .single_ev_btc_wrapper.event_filter.show #text {
-  margin-top: 4px;
-}
-
-body .my_bets_container .bet_slips_container {
-  background: var(--main_white)
-}
-
-body #fe_main .slip_buttons_area button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--main_color);
-  border: 0px;
-  color: var(--main_white);
-  font-size: 15px;
-  margin: 0px;
-  width: 100%;
-  padding: 0 4px;
-}
-
-.title_tr.title_tr_bt,
-.title_tr.title_tr_sel {
-  height: 100% !important;
-  background: transparent !important;
-}
-
-.ev_sel_odd.selected,
-.ev_sel_odd.selected:hover,
-.ev_sel_odd.selected:visited, .sportsbook_container .sportsbook_events .spn_odds_section .spn_odds_selectors .selection_box.selected {
-  background: var(--main_green) !important;
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_odds_selectors .selection_box.selected {
-  color: var(--main_white) !important;
-}
-
-.ev_sel_odd.selected a,
-.ev_sel_odd.selected:hover a,
-.ev_sel_odd.selected:visited a,
-.ev_sel_odd.selected a span {
-  background: transparent;
-  color: var(--main_white)
-}
-
-#sports_odds .sports_scroll_content,
-.odds_open {
-  display: flex;
-  width: 100%;
-  background: var(--secondary_white);
-  flex-direction: column;
-}
-
-.odds_open,
-.sports_col.sportsbook_container .sports_scroll_content {
-  flex-direction: column;
-}
-
-.odds_open.event_section {
-  flex-direction: row;
-}
-
-body .slip_stake_area .clear_bslip {
-  height: 100%;
-  padding-bottom: 0px;
-  display: flex;
-  justify-content: end;
-  padding: 0px 16px;
-}
-
-#bslip_content .slip_sel_row td.slip_sel_col_odd {
-  padding: 0px;
-}
-
-body #bslip_content td.slip_sel_col_odd span.yellow #text {
-  display: none;
-}
-
-.ev_sel_odd a,
-.ev_sel_odd a:hover,
-.ev_sel_odd a:visited {
-  line-height: 12px !important;
-}
-
-#fe_main .sr-bb .sr-header.srt-primary-6 {
-  background: var(--secondary_color);
-  font-size: 12px;
-}
-
-.sr-bb .sr-lmt-plus__segment.srm-scoreboard,
-#fe_main .sr-bb .srt-base-1 {
-  background: var(--main_color);
-}
-
-.sr-bb .sr-lmt-plus-0-hor-chart__display-value.srm-is-bold{
-  font-weight: 400
-}
-
-.sr-lmt-plus-1-statistics__wrapper.srt-base-1 {
-  background: var(--primary_white) !important;
-  color: var(--main_dark_gray) !important;
-}
-
-#fe_main .sr-bb .srt-away-1 {
-  background: var(--main_color)
-}
-
-#fe_main .sr-bb .srt-home-1 {
-  background: var(--main_dark_gray);
-}
-
-
-.sr-bb .sr-goalscorers .sr-ltr {
-  background: none !important;
-} 
-#bs_contentarea .main_title_bar .title_text {
-  color: var(--main_white)
-}
-
-body.portable-device .event_container .single_event_odds .odds_open .bt_title,
-body.portable-device .odds_tbl_holder .bt_sub_title_holder {
-  background: var(--third_color);
-  border: 0px;
-}
-
-.single_event_close_area:before {
-  left: 5px;
-  top: -9px;
-  color: var(--main_dark_gray);
-}
-
-.single_event_holder .close_league {z-index: 10;background: transparent;}
-
-#sports_menu_item_113 .cat_name span {
-  display: none;
-}
-
-#sports_menu_item_113 .cat_name:before {
-  content: "Odds Especiais";
-  font-size: 10px;
-  font-weight: bold;
-  color: var(--main_gray);
-}
-
-/* #sports_menu_item_113 .cat_icon.sporticon.si_133 {
-mask-image: url()
-} */
-
-.sb_menu_sec_area.open {
-  top: 70px;
-}
-
-#fe_main #sb_search_form input.sb_input {
-  background: var(--main_color);
-  padding: 24px 16px;
-}
-
-#fe_main .sb_menu_sec_area.open {
-  background: var(--third_color);
-}
-
-.bet_types_col.bet_types_col_col1,
-.bet_types_col.bet_types_col_col2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.bet_types_col.bet_types_col_col1 .odds_open,
-.bet_types_col.bet_types_col_col2 .odds_open {background: var(--primary_white);}
-
-#fe_header .message_center_new_messages_container {
-  max-width: 35px;
-  min-width: 25px;
-  top: 2px;
-  position: relative;
-  background: transparent;
-}
-
-.event_section .event_type_selections {
-  display: grid;
-}
-
-.event_section .event_type_selections {
-  display: grid;
-}
-
-.event_section .event_type_selections_3 {
-  background: transparent;
-  border-bottom: none;
-  width: 100%;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4px;
-  margin-bottom: 4px;
-}
-
-#sports_odds .event_section .event_type_selections .ev_sel_odd_result {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--secondary_white);
-  border-radius: 8px;
-  margin: 2px;
-  padding-right: 1px;
-  width: 100%;
-}
-
-.odds_trs.event_type_selections.event_type_selections_3 .ev_sel_odd_result {
-  width: 33.3%;
-}
-
-.odds_table.event_type_section.odds_tbl_cat3.odds_tbl_bt_1245
-  .under_over_selector_name {
-  width: calc(20% - 2px) !important;
-  height: 83px !important;
-}
-
-
-.odds_table.event_type_section.odds_tbl_cat3.odds_tbl_bt_1245
-  .odds_trs.event_type_selections.event_type_selections_3 {
-  border-bottom: 2px solid var(--secondary_white);
-  display: grid;
-  grid-template-columns: 64px 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
-  gap: 4px;
-  padding: 4px 0px;
-}
-
-.single_event_holder .single_event_info .sli_event .competitor1,
-.single_event_holder .single_event_info .sli_event .competitor2 {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.sr-cb-header__product-name.srt-text-secondary.srm-has-ellipsis {
-  font-size: 0px;
-}
-
-.sr-cb-header__product-name.srt-text-secondary.srm-has-ellipsis::before {
-  content: "Aposta Customizada";
-  font-size: 12px;
-}
-
-.sr-bb .sr-cb-header__inner .srt-text-secondary::before {
-  color: var(--main_dark_gray);
-}
-
-.sr-bb .sr-cb-list-item__wrapper {
-  border-radius: 8px;
-}
-
-.odds_table.event_type_section.bci_4.bci_161.btid_1 .event_type_title span {
-  font-size: 0px;
-}
-
-.odds_table.event_type_section.bci_4.bci_161.btid_1 .event_type_title::before {
-  content: "Resultado do Jogo";
-  font-size: 14px;
-}
-
-.bslip_errors,
-.bslip_generic_warning,
-body .slip_contents .bs_slip_id {
-  background: var(--secondary_color);
-  border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px,
-    rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
-}
-
-body .slip_contents .bs_slip_id {
-  font-size: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body .slip_contents .bs_slip_id:before {
-  content: "Aposta realizada com sucesso";
-  font-size: 14px;
-}
-
-.sr-bet-assist-standalone__wrapper.srt-base-1.srm-standalone.srm-no-padding {
-  background: transparent !important;
-}
-
-.sr-bb .sr-ba-three-values-comparison__team-name.srm-0 {
-  padding-top: 0px;
-  color: var(--main_dark_gray) !important;
-  
-}
-
-.sr-bb.sr-ba-3way.sr-ltr .sr-ba-horizontal-title__wrapper{
-  border-radius: 8px;
-  padding: 4px;
-  background: var(--main_color);
-  margin-bottom: 4px;
-  color: var(--primary_white);
-  opacity: 1;
-}
-
-.sr-bb .sr-ba-three-values-comparison__row.srm-probability.srm-0, .sr-bb .sr-ba-three-values-comparison__row.srm-probability{
-  border-radius: 8px;
-  background: var(--primary_white);
-  color: var(--main_dark_gray) !important;
-}
-
-.sr-bb .sr-ba-three-values-comparison__probability-unit.srm-0, .sr-bb .sr-ba-three-values-comparison__probability, .sr-ltr.sr-bb .sr-ba-three-values-comparison__team-name.srm-2, .sr-ltr.sr-bb .sr-ba-three-values-comparison__team-name.srm-1, .sr-bb .sr-ba-three-values-comparison__probability-unit.srm-1 {
-  color: var(--main_dark_gray) !important;
-}
-
-body .my_bets_container .touch_menu li div.selected,
-body .my_bets_container .touch_menu li div:hover {
-  border: 0;
-  color: var(--main_dark_color);
-  background: transparent !important;
-}
-
-.betting_slip .event_competition {
-  flex-wrap: nowrap;
-}
-
-.log_reg_sec a:first-child::before {
-  content: "Entrar";
-}
-.log_reg_sec a:last-child::before {
-  content: "Cadastre-se";
-  color: var(--main_color);
-  width: auto;
-  height: 40px;
-  font-size: 11px;
-  border-radius: 16px;
-  margin-bottom: 1px;
-}
-.left_menu_area .main_menu .top_menu li {
-  width: 25%;
-}
-.left_menu_area .main_menu .top_menu li a.selected {
-  background: var(--secondary_white);
-}
-
-.left_menu_area .main_menu .top_menu li a.selected:before {
-  filter: brightness(.5) saturate(100%) hue-rotate(0deg) sepia(100%) saturate(519%) hue-rotate(-50deg);
-}
-
-.left_menu_area .main_menu .top_menu li:has(a.selected) {
-  filter: brightness(1);
-}
-
-.top_menu .menu_item span {
-    color: var(--main_gray) !important;
-}
-
-.sportsbook_filter .single_filter.main {
-  border-radius: 20px;
-  margin-bottom: 12px;
-  font-size: 12px;
-}
-
-.sportsbook_navigation .navigation_block.invictus_round.invictus_round_casino {
-  background: transparent;
-}
-
-#sports_menu {
-  padding: 8px;
-  border-radius: 16px;
-  background: var(--secondary_white);
-  margin-top: 8px;
-}
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  .selector {
-  /* margin-right: 20px; */
-  margin-bottom: 0;
-}
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_odds_selectors
-  .selection_box
-  a {
-  display: flex;
-  flex-direction: row;
-}
-.sportsbook_container
-  .sportsbook_events
-  .spn_odds_section
-  .spn_event_section
-  .spn_event_details
-  span {
-  font-size: 11px;
-  /* display: flex; */
-  font-weight: 500;
-}
-
-.login_page_container form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.login_option_switcher {
-  display: flex;
-  flex-flow: row nowrap !important;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 8px;
-  padding: 0px;
-
-  order: -1;
-}
-
-#fe_login_box_popup .logo_area {
-  display: flex;
-  order: -1;
-}
-
-.sr-bb .sr-cb-header__inner {
-  padding: 0px 8px
-}
-
-.sr-bb .sr-cb-header__click-area.srm-is-clickable {
-  background: var(--secondary_white)
-}
-
-.sr-bb .sr-cb-header__item-wrapper.srm-end {
-  justify-content: center;
-}
-
-.login_option_switch_text {
-  position: absolute;
-}
-
-.login_option_switch.button {
-  clip-path: none;
-  border-radius: 8px;
-}
-
-.login_page_container form .login_page_row:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0px;
-}
-
-.login_option_switch_text {
-  position: absolute;
-  bottom: 159px;
-  display: none !important;
-}
-.input_fld {
-  padding: 0px;
-}
-
-.login_page_container .login_page_row.login_page_row_btn {
-  margin-top: 0px;
-}
-#launcher {
-  bottom: 112px !important;
-  z-index: 995 !important;
-}
-.sportsbook_navigation .navigation_block img,
-.casino_navigation .navigation_block img {
-  margin: 0px auto;
-  width: 16px;
-  height: 16px;
-  filter: brightness(0.5);
-}
-.fw_body {
-  padding: 0px;
-  background: var(--primary_white);
-}
-.fw_body .fw_bet_section .selection_box a {
-  background-color: var(--secondary_white);
-  color: var(--primary_txt_color);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.fw_body .fw_bet_section .selection_box a .selector {
-  color: var(--main_color);
-  font-size: 14px;
-}
-.fw_body .fw_bet_section .selection_box a .odd {
-  color: var(--main_dark_gray);
-  font-size: 16px;
-}
-
-.fw_body .fw_match_section {
-  color: var(--main_black);
-  padding: 4px 16px;
-  font-size: 12px;
-}
-
-.fw_header .fw_header_info {
-  padding: 6px 8px;
-  font-size: 12px;
-  width: 70%;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.fw_header .fw_header_info {
-  background-position-x: 10px;
-}
-
-.fw_header .fw_header_info.date {
-  width: 30%;
-  background-image: none;
-}
-.fw_header .fw_header_info span {
-  vertical-align: middle;
-  color: var(--main_black);
-  font-weight: 600;
-}
-
-.fw_header {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background: var(--secondary_white);
-  border-radius: 12px;
-  margin-bottom: 8px;
-}
-#sports_odds .event_section .event_type_selections .under_over_selector_name {
-  font-weight: bold;
-  height: 40px !important;
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background: var(--cassino_bg)!important; */
-  grid-row: span 3;
-  position: relative;
-  /* left: 40%; */
-  border-radius: 8px;
-  color: var(--main_dark_gray);
-}
-
-.sportsbook_widget {
-  width: 100%;
-  padding: 0;
-  background: var(--primary_white);
-  border-radius: 16px;
-}
-
-.fw_header .fw_header_info:first-child:before {
-  content: "";
-  display: flex;
-  background: url("/uploads/files/lightning-png-6671eebeda888.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 32px;
-  height: 32px;
-}
-
-.sr-bb .sr-cb-outcome-grid__bet-assist {
-    background: var(--secondary_white)
-}
-
-.fw_header .fw_header_info,
-.fw_header .fw_header_info.date {
-  background: transparent;
-}
-
-.sportsbook_widget .swiper-button-prev,
-.sportsbook_widget .swiper-button-next {
-  width: 6%;
-  background-color: transparent;
-}
-
-#fe_main .swiper-button-next:after,
-#fe_main .swiper-button-prev:after {
-  font-size: 14px;
-  background: transparent;
-  color: var(--main_black);
-}
-
-.sportsbook_navigation .navigation_block.invictus_round a,
-.casino_navigation .navigation_block.invictus_round a {
-  border-radius: 16px;
-  gap: 2px;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  height: 100%;
-  justify-content: center;
-}
-
-.sportsbook_navigation .navigation_block,
-.casino_navigation .navigation_block {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  height: 61px !important;
-  justify-content: center;
-  width: 19%;
-}
-
-.sportsbook_navigation .navigation_block.nav-chat {
-  display: none;
-}
-
-.casino_navigation .navigation_block {
-  width: 19%;
-}
-
-.sportsbook_navigation .navigation_block a span,
-.casino_navigation .navigation_block a span {
-  font-size: 10px;
-  color: var(--main_gray);
-  font-weight: 500;
-}
-
-.sportsbook_navigation .navigation_block.invictus_round,
-.casino_navigation .navigation_block.invictus_round {
-  background: transparent;
-  border: 0;
-  padding: 1px;
-  border-radius: 16px;
-  px; */
-}
-
-.fw_body .fw_bet_section .selection_box.selected a {
-  background: var(--selectOdd);
-}
-
-.sportsbook_navigation .betstlip_full {
-  border-radius: 99%;
-  padding: 4px 10px;
-  top: -57px;
-  background: var(--main_color);
-}
-
-.sportsbook_navigation .betstlip_full img {
-  width: 24px;
-}
-.sportsbook_navigation .betstlip_full .betslip_name {
-  font-size: 0px;
-}
-
-.sportsbook_navigation .betstlip_full .betslip_name:before {
-  content: "Bilhete";
-  font-size: 12px;
-}
-
-.navigation_bottom .sportsbook_navigation,
-.casino_navigation {
-  border-radius: 16px 16px 0px 0px;
-  display: flex;
-  background: var(--main_white);
-  justify-content: space-around;
-  border: 0;
-  box-shadow: 0px -4px 20px 10px rgba(0, 0, 0, 0.05);
-  padding: 1px 0px;
-}
-
-.casino_navigation {
-  justify-content: space-around;
-}
-
-.fw_body .fw_bet_section {
-  margin-top: 0px;
-}
-
-.prematch_container
-  .event_section
-  .odds_tbl_cat3.odds_tbl_bt_273
-  .odds_trs
-  .under_over_selector_name
-  .selector_name,
-.prematch_container
-  .event_section
-  .odds_tbl_cat3.odds_tbl_bt_1245
-  .odds_trs
-  .under_over_selector_name
-  .selector_name {
-  margin-top: 0px;
-}
-
-.odds_table.event_type_section.bci_4.bci_161.btid_1.event_section .event_type_selections {
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.odds_open .odds_table.odds_tbl_bt_138 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_690 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_82 .event_type_selections_3 {
-  grid-template-columns: 64px 3fr;
-}
-
-.bet_types_col.bet_types_col_col1
-  .odds_open
-  .odds_table
-  .odds_trs.event_type_selections_2 {
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_open .odds_table.odds_tbl_bt_273 .event_type_selections_3, .odds_table.event_type_section.bci_11.bci_35.bci_106.btid_173 .event_type_selections, .odds_table.event_type_section.bci_11.bci_35.btid_171 .event_type_selections, .odds_table.event_type_section.bci_36.bci_35.bci_106.bci_7.bci_11.btid_152 .event_type_selections{
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.odds_open .odds_table.bci_35 .event_type_selections_3 {
-  grid-template-columns: 1fr;
-}
-
-.odds_open .odds_table.bci_7.bci_35.bci_106.btid_131,
-.odds_open .odds_table.bci_99.btid_2512 {
-  display: grid;
-  gap: 8px;
-}
-
-.odds_open .odds_table.odds_tbl_bt_185 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_167 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_245 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_108 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_106 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_882 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_273 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_58 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_1720 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_581 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_562 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_93 .event_type_selections_3 {
-  grid-template-columns: 64px 1fr 1fr;
-}
-
-.odds_open .odds_table.bci_99.btid_2512 .event_type_selections_3 {
-  grid-template-columns: 1fr;
-}
-
-.odds_open
-  .odds_table.odds_tbl_bt_1245
-  .event_type_selections_3
-  .under_over_selector_name {
-  left: 40%;
-}
-
-.odds_open .odds_table.odds_tbl_bt_138 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_690 .event_type_selections_3,
-.odds_open .odds_table.odds_tbl_bt_82 .event_type_selections_3 {
-  grid-template-columns: 64px 1fr 1fr 1fr;
-}
-
-.odds_open .odds_table.bci_35.bci_106.bci_140.btid_140,
-.odds_open .odds_table.bci_35.btid_2478,
-.odds_table.bci_11.bci_35.bci_106.btid_92,
-.odds_table.bci_11.bci_35.bci_106.btid_173,
-.odds_table.bci_35.btid_2479 {
-  display: grid;
-  gap: 8px;
-}
-
-.odds_open .odds_table.bci_36.bci_35.bci_106.bci_7.bci_11.btid_152 {
-  display: grid;
-  gap: 4px;
-}
-
-.odds_open .odds_table.bci_35.bci_106.bci_140.btid_140 .event_type_selections_3,
-.odds_open
-  .odds_table.bci_7.bci_35.bci_106.bci_140.btid_80
-  .event_type_selections_3,
-.odds_open {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.odds_open .odds_table.bcid_27.bcid_36.btid_107 .event_type_selections_2,
-.odds_open .odds_table.bcid_27.bcid_36.btid_110 .event_type_selections_2,
-.odds_open .odds_table.bcid_28.bcid_36.btid_160 .event_type_selections_2,
-.odds_open .odds_table.bcid_36.btid_702 .event_type_selections_2,
-.odds_open .odds_table.bcid_36.btid_155 .event_type_selections_2,
-.odds_open .odds_table.bcid_28.btid_163 .event_type_selections_2,
-.odds_open .odds_table.bcid_68.btid_147 .event_type_selections_2, .odds_open .odds_table.bcid_28.bcid_36.btid_159 .event_type_selections_2, .odds_open .odds_table.bcid_68.bcid_7.btid_66 .event_type_selections_2, .odds_open .odds_table.bcid_27.btid_6 .event_type_selections_2, .odds_open .odds_table.bcid_28.btid_5 .event_type_selections_2{
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-
-.registration_tbl span.reg_ttl2 {
-  font-size: 0px;
-}
-
-.registration_tbl span.reg_ttl2:before {
-  content: "Seja bem-vindo a  Invictosbet, \A sua casa de apostas com as melhores odds e o cassino mais completo do Brasil! \A \A Viva o lado Invictosbet!";
-  font-size: 16px;
-  white-space: pre-wrap;
-  color: var(--main_dark_gray);
-}
-
-body.portable-device.skin-120#reg_user_form .registration_tbl,
-.skin-120 .registration_tbl {
-  border-color: gray;
-  padding: 0px;
-}
-
-.reg_v10 .reg_steps_container .reg_steps {
-  background: var(--secondary_white);
-  color: var(--main_dark_gray);
-}
-
-#fe_main button.reg_btn {
-  background: var(--main_color) !important;
-  border-radius: 8px !important;
-  margin: 0px;
-  padding: 0px;
-  font-size: 14px;
-  height: 38px;
-}
-
-.reg_error_list:before {
-  border: 0px;
-}
-
-.reg_error_list .reg_error_item {
-  padding-right: 24px
-}
-
-#fe_main .registration_container p.password_tooltip {
-  display: none;
-}
-
-.event_section .odds_tbl_cat5 .bt_name_dyn_header,
-.event_section .odds_tbl_cat5 .event_type_selections > .bts_name_dyn {
-  background: transparent;
-  padding: 4px 0px;
-  color: var(--main_dark_gray);
-  font-weight: 600;
-}
-
-.reg_steps_wrapper .reg_steps_container {
-  display: flex;
-  justify-content: space-around
-}
-
-.skin-120 .reg_v10 .reg_steps_container .checked_step, .skin-120 .reg_v10 .reg_steps_container .reg_steps.selected_step {
-  background-color: var(--main_color);
-}
-.reg_v10 .reg_steps_container .reg_steps {
-  border-radius: 99%;
-    width: 50px;
-  height: 25px;
-    justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.odds_open .odds_table.odds_tbl_bt_1160 {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.odds_open .odds_table.odds_tbl_bt_1160 .bts_name_dyn {
-  grid-column: 1 / span 3;
-}
-
-.odds_open .odds_table.odds_tbl_bt_1160 .event_type_selections_3 {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.odds_open
-  .odds_table.odds_tbl_bt_1160
-  .event_type_selections_3
-  .selection_box.ev_sel_odd {
-  width: 100%;
-  background: var(--main_color);
-}
-
-.odds_open
-  .odds_table.odds_tbl_bt_1160
-  .event_type_selections_3
-  .selection_box.ev_sel_odd
-  a {
-  padding: 4px !important;
-  background: transparent;
-}
-
-.odds_open
-  .odds_table.odds_tbl_bt_1160
-  .event_type_selections_3
-  .selection_box.ev_sel_odd {
-  border-radius: 8px;
-}
-
-#sports_odds .event_section .event_type_selections div a .selector_name,
-#sports_odds
-  .event_section
-  .odds_tbl_cat5
-  .event_type_selections
-  .selection_box
-  a
-  .selector {
-  font-size: 9px;
-  color: var(--main_color);
-  font-weight: 600;
-}
-
-#sports_odds .event_section .event_type_selections div.bts_name_dyn {
-  background: var(--secondary_white);
-  border-radius: 4px;
-  color: var(--main_dark_gray);
-  font-weight: 500;
-}
-
-#sports_odds .event_section .event_type_selections div.bts_name_dyn span {
-  padding: 0px 8px;
-  font-size: 10px;
-}
-
-
-.paym_field table tbody tr:nth-child(1) {
-  display: flex !important;
-  width: 100%;
-}
-
-.slip_buttons_area {
-  position: static;
-}
-
-.paym_field table tbody tr:nth-child(1) td .title,
-.paym_field table tbody tr nth-child(1) td div input {
-  width: 100%;
-}
-
-.deposit-lobby-page .paym_field_cont table tr td .title,
-.deposit-lobby-page .paym_field_cont table tr td {
-  width: 100%;
-}
-
-.odds_open.bt_id_908 .event_type_selections,
-.odds_open.bt_id_572 .event_type_selections {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_open.bt_id_1530 .event_type_selections,
-.odds_open.bt_id_827 .event_type_selections,
-.odds_open.bt_id_1061 .event_type_selections,
-.odds_open.bt_id_1062 .event_type_selections,
-.odds_open.bt_id_826 .event_type_selections,
-.odds_open.bt_id_2050 .event_type_selections,
-.odds_open.bt_id_2045 .event_type_selections,
-.odds_open.bt_id_2048 .event_type_selections,
-.odds_open.bt_id_2018 .event_type_selections,
-.odds_open.bt_id_2017 .event_type_selections,
-.odds_open.bt_id_2049 .event_type_selections,
-.odds_open.bt_id_2016 .event_type_selections,
-.odds_open.bt_id_2010 .event_type_selections,
-.odds_open.bt_id_2044 .event_type_selections,
-.odds_open.bt_id_2031 .event_type_selections,
-.odds_open.bt_id_2053 .event_type_selections,
-.odds_open.bt_id_2047 .event_type_selections,
-.odds_open.bt_id_2056 .event_type_selections,
-.odds_open.bt_id_2046 .event_type_selections,
-.odds_open.bt_id_2055 .event_type_selections,
-.odds_open.bt_id_2030 .event_type_selections,
-.odds_open.bt_id_1785 .event_type_selections,
-.odds_open.bt_id_574 .event_type_selections,
-.odds_tbl_bt_51 .event_type_selections,
-.odds_tbl_bt_701 .event_type_selections {
-  grid-template-columns: 0.5fr 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_open.bt_id_896 .event_type_selections,
-.odds_open.bt_id_915 .event_type_selections,
-.odds_open.bt_id_634 .event_type_selections,
-.odds_open.bt_id_1788 .event_type_selections,
-.odds_open.bt_id_2028 .event_type_selections,
-.odds_open.bt_id_2029 .event_type_selections,
-.odds_open.bt_id_1784 .event_type_selections,
-.odds_open.bt_id_2036 .event_type_selections,
-.odds_open.bt_id_2027 .event_type_selections,
-.odds_open.bt_id_2037 .event_type_selections {
-  grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2445 .odds_trs {
-  grid-template-columns: 1fr 64px !important;
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2445 .selection_box.ev_sel_odd a {
-  padding: 0px !important;
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773 .selection_box.ev_sel_odd a {
-  padding: 0px !important;
-} 
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773 .bts_name_dyn {
-  grid-column: 1 / 3
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_1773 .odds_trs {
-  grid-template-columns: 1fr 1fr;
-}
-
-.odds_open.bt_id_2084 .bt_title.min {
-  padding: 8px;
-}
-
-.odds_open.bt_id_2084 .event_type_selections {
-  grid-template-columns: 2fr 1fr;
-}
-
-.odds_open.bt_id_2084 .odds_tbl_holder .odds_trs .ev_sel_odd_result a,
-.odds_open.bt_id_2086 .odds_tbl_holder .odds_trs .ev_sel_odd_result a {
-  justify-content: center !important;
-}
-.odds_open .odds_tbl_holder .odds_trs {
-  background-color: var(--third_color);
-  padding: 4px 8px;
-}
-
-.odds_open.bt_id_2084 {
-  margin: 4px;
-}
-
-.odds_open.bt_id_590 .event_type_selections,
-.odds_open.bt_id_150 .event_type_selections,
-.odds_open.bt_id_589 .event_type_selections,
-.odds_open.bt_id_598 .event_type_selections,
-.odds_open.bt_id_2118 .event_type_selections,
-.odds_open.bt_id_2117 .event_type_selections,
-.odds_open.bt_id_596 .event_type_selections {
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_open.bt_id_2086 .event_type_selections {
-  grid-template-columns: 2fr 1fr;
-  gap: 4px;
-}
-
-.odds_open.bt_id_593 .event_type_selections,
-.odds_open.bt_id_592 .event_type_selections {
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2304 .event_type_selections_3 .bts_name_dyn{
-  grid-column: 1 / 4;
-}
-
-.odds_table.event_type_section.odds_tbl_cat5.odds_tbl_bt_2304 .event_type_selections_3 a {
-  padding: 0px !important;
-}
-
-.selection_box.ev_sel_odd {
-  background: var(--secondary_white) !important;
-}
-
-#cboxContent #bs_contentarea {
-  width: 100%;
-  background: var(--button-gradient);
-  border-radius: 16px;
-  padding: 1px;
-  box-shadow: 0px 4px 15px 0px rgba(255, 0, 0, 0.22);
-}
-
-.message_content_tbl .header,
-.message_content_tbl .date {
-  display: none;
-}
-
-.message_content_tbl tbody tr {
-  height: auto !important;
-}
-
-.message_content_tbl tbody tr td {
-  padding-bottom: 0px !important;
-  margin: 0px 12px;
-}
-.message_content_tbl tbody tr:nth-child(1) td {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.message_content_tbl tbody tr:nth-child(2) td {
-  font-size: 10px;
-  color: #a1a1aa;
-}
-
-.message_content_tbl tbody tr:nth-child(3) td:nth-child(1) {
-  display: none;
-}
-
-td.content.full {
-  padding: 0px;
-  background: var(--third_color);
-}
-
-.inbox-message-center .read_message_page .section_title_bar {
-  border-radius: 16px 16px 0px 0px;
-  background: var(--third_color);
-}
-
-.read_message_page .bs_data_wrapper.bs_filters {
-  border-radius: 0px 0px 16px 16px;
-  background: var(--third_color);
-}
-
-.section_title_bar .messages_icon {
-  font-size: 14px;
-}
-
-body#fe_body.inbox-message-center #cboxClose {
-  border: 0px !important;
-}
-
-.registration_tbl tr:nth-child(2) {
-  padding: 0px;
-}
-
-.registration_tbl tr:nth-child(5),
-.registration_tbl tr:nth-child(6) {
-  display: none;
-}
-
-.registration_tbl tr {
-  display: flex;
-  flex-direction: column;
-}
-
-.registration_tbl td.reg_field_name {
-  padding: 0px;
-  color: var(--main_dark_gray);
-  font-size: 12px;
-}
-
-.registration_tbl td {
-  padding: 0px;
-}
-#verify-cpf {
-  height: 100%;
-  padding: 2px 15px;
-  border-radius: 8px !important;
-}
-
-.cpf-input {
-  background: var(--secondary_white) !important;
-}
-
-.cpf-input::placeholder {
-  color: #c9c9c9 !important;
-}
-
-div.pass_icon:before, div.mail_icon:before, div.usr_nm:before, div.usr_nm:before, span.dt_icon:before {
-  margin-top: 2px;
-  filter: brightness(0.5);
-  border: 0px;
-}
-
-.usr_nm.keep-in-line {
-  background: var(--secondary_white) !important;
-  border-radius: 8px !important;
-}
-
-.chk_bx_cnt{
-  color: var(--main_dark_gray);
-  font-size: 12px;
-}
-
-div.usr_nm.keep-in-line:before {
-  height: 36px;
-}
-
-#fe_main:not(:has(.digitain_outer_wrapper))
-  .reg_v11
-  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
-    [type="button"]
-  ):not([type="reset"]):not([type="file"]) {
-  border-radius: 8px !important;
-}
-
-.login_menu_area_v2 .balance_btns_holder .right_menu_btn_container .balance_icon_container, .login_menu_area_v2 .balance_btns_holder .right_menu_btn_container .bets_icon_container {
-  filter:brightness(0.5)
-}
-
-.balance_text_container, .bets_text_container {
-  color: var(--main_dark_gray)
-}
-
-.registration_tbl table {
-  padding: 12px;
-}
-
-.registration_tbl .chk_bx {
-  padding-left: 8px;
-}
-
-.chk_bx_cnt input:checked ~ .checkmark2 {
-  background: var(--main_color);
-  border: 0px;
-  border-radius: 4px;
-  height: 20px;
-  width: 20px;
-}
-
-.message_center_new_messages_container .messages_ico {
-  width: calc(100% - 8px);
-}
-
-.skin-120 .mob_header .deposit-cont, .skin-120 .mob_header .call_icon_container, .skin-120 .mob_header .messages_area {
-  background: var(--main_white)
-}
-
-
-
-.bonus_list_section .bonus_list_header {
-    color: var(--main_dark_gray);
-}
-
-.bonus_list_section .bonus_list_header .bonus_list_header_name h3 {
-    font-weight: 600
-}
-
-.no_bonuses_found {
-  color: var(--main_dark_gray);
-  text-align: center;
-}
-
-.bonus_list_items_section .bl_item:not(.selected) {
-    color: var(--main_dark_gray);
-    padding-bottom: 6px;
-}
-
-.bonus_list_items_section .bl_item.selected {
-  padding-bottom: 6px;
-}
-
-.bonus_list_items_section ul {
-  height: 40px;
-}
-
-.bonus_list_items_section {
-    padding: 0px;
-    text-align: center;
-}
-
-#fe_web_container #fe_main .help_wrap_v2 .help_txt_content {
-    color: var(--main_dark_gray)
-}
-
-.message_center_new_messages_container .messages_area {
-  background: transparent !important;
-}
-
-.chk_bx_cnt .checkmark2:after {
-  top: 2px;
-  left: 6px;
-  width: 4px;
-  height: 8px;
-}
-
-.help_wrap_v2 ul.nav li a {
-  background: var(--main_color)
-}
-
-.help_wrap_v2 ul.nav li a:hover {
-  background: var(--main_color);
-}
-
-.form3 .field_errors_notice {
-  right: 0px;
-}
-
-.casino_navigation .navigation_block.invictus_round.invictus_round_casino {
-    background: transparent;
-}
-
-#fe_main:not(:has(.digitain_outer_wrapper)) input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]).maxw, #fe_main:not(:has(.digitain_outer_wrapper)) input[type="submit"].maxw, #fe_main input[type="button"].maxw, button.maxw, select.maxw, textarea.maxw {
-  color: var(--main_dark_gray)
-}
-
-.sr-bb .srt-primary-1 {
-  background: var(--primary_white) !important;
-  color: var(--main_dark_gray) !important;
-}
-
-.sr-bb .srt-win {
-  background: green !important
-}
-
-.sr-bb .srt-lose {
-  background: red !important;
-}
-
-.sr-bb .sr-ba-form__team-value-number {
-  color: var(--main_dark_gray)
-}
-
-.sr-bb .srt-fill-primary-1 {
-  fill: var(--primary_white) !important;
-}
-
-.promotions-main-page #fe_main {
-  background: var(--secondary_white) !important;
-}
-.promo_link_wrapper .promotion_container {
-  background: var(--primary_white) !important
-}
-
-.promo-tpl-2 .promotion_title, .promo-tpl-2 .bs_icon.arrow:after, .bs_icon.arrow:after, .promo-tpl-2 .promo_desc p {
-  color: var(--main_dark_gray)
-}
-
-.promo-tpl-2 .promo_btn, .promo_btn {
-  background: var(--main_color) !important
-}
-
 
 /*Sportlive*/
-
-.body-sportslive {
+#fe_body.body-sportslive {
   .sports_odds_live_item .sportsodds .sb_sec_title {
-  background: var(--primary_gradient);
-}
+    background: var(--primary_gradient);
+  }
 
-#fe_main .page_tt_bar {
-  background: var(--primary_reverse_gradient);
-  border: 0px;
-}
+  #fe_main .page_tt_bar {
+    background: var(--primary_reverse_gradient);
+    border: 0px;
+  }
 
-.sports_odds_live_item .sportsodds .sb_sec_title .sporticon {
-  margin: 0px 0px 0px 16px;
-}
+  .sports_odds_live_item .sportsodds .sb_sec_title .sporticon {
+    margin: 0px 0px 0px 16px;
+  }
 
-.title_tr.title_tr_bt,
-.title_tr.title_tr_sel {
-  background: linear-gradient(90deg, #151517, #000000);
-  height: 32px;
-}
+  .title_tr.title_tr_bt,
+  .title_tr.title_tr_sel {
+    background: linear-gradient(90deg, #151517, #000000);
+    height: 32px;
+  }
 
-.odds_table .title_tr_bt > td.slt_holder,
-.odds_table .title_tr_bt > td,
-.odds_table .title_tr_sel > td {
-  background: transparent;
-}
+  .odds_table .title_tr_bt > td.slt_holder,
+  .odds_table .title_tr_bt > td,
+  .odds_table .title_tr_sel > td {
+    background: transparent;
+  }
 
-.slt_holder {
-  font-size: 14px;
-}
+  .slt_holder {
+    font-size: 14px;
+  }
 
-.odt {
-  font-size: 13px;
-  color: var(--main_red);
-}
-.h_bt_sel {
-  font-size: 14px;
-}
+  .odt {
+    font-size: 13px;
+    color: var(--main_red);
+  }
+  .h_bt_sel {
+    font-size: 14px;
+  }
 
-.odds_tr,
-.ev_sel_odd {
-  background: var(--main_black);
-}
+  .odds_tr,
+  .ev_sel_odd {
+    background: var(--main_black);
+  }
 
-.ev_name {
-  border-right: 0px;
-}
+  .ev_name {
+    border-right: 0px;
+  }
 
-.ev_name_wrp {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 4px;
-}
+  .ev_name_wrp {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 4px;
+  }
 
-.odds_table a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-}
+  .odds_table a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
 
-.ev_sel_odd.selected,
-.ev_sel_odd.selected:hover,
-.ev_sel_odd.selected:visited {
-  background: var(--main_black);
-}
+  .ev_sel_odd.selected,
+  .ev_sel_odd.selected:hover,
+  .ev_sel_odd.selected:visited {
+    background: var(--main_black);
+  }
 
-.ev_sel_odd.selected a span,
-.ev_sel_odd.selected a,
-.ev_sel_odd.selected:hover a,
-.ev_sel_odd.selected:visited a {
-  background: #4cb871;
-  border-radius: 4px;
-}
+  .ev_sel_odd.selected a span,
+  .ev_sel_odd.selected a,
+  .ev_sel_odd.selected:hover a,
+  .ev_sel_odd.selected:visited a {
+    background: #4cb871;
+    border-radius: 4px;
+  }
 
-.ev_name span {
-  font-size: 14px;
-}
+  .ev_name span {
+    font-size: 14px;
+  }
 
-#bslip_content .slip_tabs {
-  background: var(--main_black);
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  padding: 16px;
-  justify-content: center;
-}
-#bslip_content .slip_selections_area .teams {
-  padding: 16px 0px 5px 16px;
-}
-#bslip_content .bslip_selection_tbl tr,
-td.slip_sel_col_clear {
-  background-color: transparent;
-}
-#bslip_info_area table tbody {
-  display: flex;
-  /* flex-direction: column; */
-  gap: 8px;
-}
-#bslip_info_area table tbody tr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  padding: 4px;
-}
-.mm_win_dv .mm_win_text {
-  background: var(--primary_reverse_gradient);
-  padding: 20px 0px;
-  font-size: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-image: var(--black_red_gradient) 1;
-  border-bottom: 2px solid;
-}
+  #bslip_content .slip_tabs {
+    background: var(--main_black);
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+  }
+  #bslip_content .slip_selections_area .teams {
+    padding: 16px 0px 5px 16px;
+  }
+  #bslip_content .bslip_selection_tbl tr,
+  td.slip_sel_col_clear {
+    background-color: transparent;
+  }
+  #bslip_info_area table tbody {
+    display: flex;
+    gap: 8px;
+  }
+  #bslip_info_area table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 4px;
+  }
+  .mm_win_dv .mm_win_text {
+    background: var(--primary_reverse_gradient);
+    padding: 20px 0px;
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: var(--black_red_gradient) 1;
+    border-bottom: 2px solid;
+  }
 
+  .clear_bs {
+    top: -32px;
+  }
+  .slip_event_info {
+    border-top: 0px;
+  }
+  .slip_sel_row {
+    border-bottom: 0px !important;
+  }
+  #bslip_info_area {
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 0px;
+  }
+  .clear_bslip a span {
+    font-size: 14px;
+  }
+  #bslip_info_area table tbody tr:last-child {
+    padding: 0px;
+    width: 100%;
+    align-items: center;
+    padding: 0px 16px;
+  }
+  .mm_win_dv .mm_win_text::before {
+    content: "GANHO POTENCIAL";
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  .slip_stake_area {
+    padding: 0px;
+    background: #151619;
+  }
+  .clear_bs:before,
+  .clear_bs:after {
+    height: 12px;
+    width: 2px;
+  }
+  #bslip_content td.slip_sel_col_odd span {
+    background-color: transparent;
+    color: var(--accent1_color);
+    font-weight: bold;
+  }
+  #bslip_content td.slip_sel_col_bt_name {
+    font-size: 16px;
+    font-style: normal;
+  }
+  #bslip_info_area .sba_val {
+    width: 120px;
+  }
+  #bslip_content .slip_sel_row.last_ev_row td {
+    border-bottom: transparent;
+  }
 
-.clear_bs {
-  top: -32px;
-}
-.slip_event_info {
-  border-top: 0px;
-}
-.slip_sel_row {
-  border-bottom: 0px !important;
-}
-#bslip_info_area {
-  border-radius: 0px;
-  background-color: transparent;
-  padding: 0px;
-}
-.clear_bslip a span {
-  font-size: 14px;
-}
-#bslip_info_area table tbody tr:last-child {
-  padding: 0px;
-  width: 100%;
-  align-items: center;
-  padding: 0px 16px;
-}
-.mm_win_dv .mm_win_text::before {
-  content: "GANHO POTENCIAL";
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  color: #fff;
-}
-.slip_stake_area {
-  padding: 0px;
-  background: #151619;
-}
-.clear_bs:before,
-.clear_bs:after {
-  height: 12px;
-  width: 2px;
-}
-#bslip_content td.slip_sel_col_odd span {
-  background-color: transparent;
-  color: var(--accent1_color);
-  font-weight: bold;
-}
-#bslip_content td.slip_sel_col_bt_name {
-  font-size: 16px;
-  font-style: normal;
-}
-#bslip_info_area .sba_val {
-  width: 120px;
-}
-#bslip_content .slip_sel_row.last_ev_row td {
-  border-bottom: transparent;
-}
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section {
+    width: 100%;
+  }
 
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_event_section {
-  width: 100%;
-}
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors {
+    width: 100%;
+  }
 
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_odds_selectors {
-  width: 100%;
-}
-
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_odds_selectors .selection_box .selector {
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_odds_selectors
+    .selection_box
+    .selector {
     margin-right: 50px;
     margin-bottom: 0;
-}
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_event_section .spn_event_details {
+  }
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_event_details {
     margin-top: 4px;
-}
-.swiper-slide img {
-    width: 100%;
-    display: none;
+  }
+
+  .sportsbook_container
+    .sportsbook_events
+    .spn_odds_section
+    .spn_event_section
+    .spn_event_details
+    .event_period {
+    margin-top: 16px;
+  }
 }
 
-.sportsbook_container .sportsbook_events .spn_odds_section .spn_event_section .spn_event_details .event_period {
-  margin-top: 16px;
-}
-}
-
-.left_menu_area_inner .main_menu {
-  height: auto;
-}
-
-/*cassino*/
-
-.casino-main-page, .casino-live-main-page {
+/* Cassino */
+.casino-main-page,
+.casino-live-main-page {
   .search_container {
-  background: var(--primary_white);
-  padding: 16px;
-}
+    background: var(--primary_white);
+    padding: 16px;
+  }
 
-#fe_main .search_input .casino_input {
-  background: var(--secondary_white) !important;
-  width: 100% !important;
-  padding: 3px 12px !important;
-  border-radius: 8px !important;
-  color: var(--main_dark_gray) !important;
-}
+  #fe_main .search_input .casino_input {
+    background: var(--secondary_white) !important;
+    width: 100% !important;
+    padding: 3px 12px !important;
+    border-radius: 8px !important;
+    color: var(--main_dark_gray) !important;
+  }
 
-.search_btn {
-  position: absolute;
-  right: 0;
-  width: 12%;
-}
+  .search_btn {
+    position: absolute;
+    right: 0;
+    width: 12%;
+  }
 
-.search_btn button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  right: 4px;
-}
+  .search_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 4px;
+  }
 
-.search_btn button:after {
-  color: var(--main_dark_gray);
-}
+  .search_btn button:after {
+    color: var(--main_dark_gray);
+  }
 
-.cfv2_sections_menu {
-  background: var(--secondary_white);
-  display: flex;
-  align-items: center;
-  height: 58px;
-}
+  .cfv2_sections_menu {
+    background: var(--secondary_white);
+    display: flex;
+    align-items: center;
+    height: 58px;
+  }
 
-.cfv2_sections_menu span {
-  padding: 0 16px;
-  color: var(--main_dark_gray);
-}
+  .cfv2_sections_menu span {
+    padding: 0 16px;
+    color: var(--main_dark_gray);
+  }
 
-.cfv2_sections_menu .selected span {
-  border: none;
-  background: transparent;
-  color: var(--main_color) !important;
-  font-weight: 700;
-  padding: 0px 16px;
-}
+  .cfv2_sections_menu .selected span {
+    border: none;
+    background: transparent;
+    color: var(--main_color) !important;
+    font-weight: 700;
+    padding: 0px 16px;
+  }
 
-.cfv2_sections_menu ul.cfv2_sections_nav,
-.cfv2_sections_menu ul.cfv2_sections_nav li,
-.cfv2_sections_menu ul.cfv2_sections_nav li div, .cfv2_sections_menu .selected span {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+  .cfv2_sections_menu ul.cfv2_sections_nav,
+  .cfv2_sections_menu ul.cfv2_sections_nav li,
+  .cfv2_sections_menu ul.cfv2_sections_nav li div,
+  .cfv2_sections_menu .selected span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-.cfv2_sections_menu ul.cfv2_sections_nav li div {
-  padding: 0px;
-  min-width: 100%;
-  justify-content: center;
-}
+  .cfv2_sections_menu ul.cfv2_sections_nav li div {
+    padding: 0px;
+    min-width: 100%;
+    justify-content: center;
+  }
 
-.casino_lobby_wrapper {
-  background: var(--secondary_white);
-}
+  .casino_lobby_wrapper {
+    background: var(--secondary_white);
+  }
 
-.casino_filters_menu_dropdown
-  .providers_filter
-  .cfv2_providers_nav_dropdown
-  li
-  a {
-  border-radius: 8px;
-  background: var(--secondary_white) !important;
-}
+  .casino_filters_menu_dropdown
+    .providers_filter
+    .cfv2_providers_nav_dropdown
+    li
+    a {
+    border-radius: 8px;
+    background: var(--secondary_white) !important;
+  }
 
-.providers_filter .providers_menu ul li a span.total_games_count {
-  display: none;
-}
+  .casino_filters_menu_dropdown .cfv2_providers_nav_dropdown li a img {
+    left: 50%;
+    filter: brightness(0);
+  }
 
-.casino_filters_menu_dropdown .cfv2_providers_nav_dropdown li a img {
-  left: 50%;
-  filter: brightness(0);
-}
+  #cfv2_provider_item_191 a img,
+  #cfv2_provider_item_195 a img {
+    filter: brightness(1);
+  }
+  #fe_main
+    .casino_container
+    .lobby_section_container
+    .games_holder
+    .games_list_item:first-child {
+    width: 32%;
+  }
 
-#cfv2_provider_item_191 a img,
-#cfv2_provider_item_195 a img {
-  filter: brightness(1);
-}
-#fe_main
-  .casino_container
-  .lobby_section_container
-  .games_holder
-  .games_list_item:first-child {
-  width: 32%;
-}
+  .lobby_section_container .section_games_lobby_container {
+    margin-left: -10px;
+    margin-right: -10px;
+    background: var(--primary_white);
+  }
+  .section_title_container .show_all_btn {
+    float: right;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: var(--main_color);
+    display: flex;
+    justify-content: space-between;
+  }
+  .section_title_container {
+    border-bottom: none;
+    background-color: var(--primary_white);
+    color: var(--main_dark_gray);
+    padding: 4px 4px;
+  }
+  .lobby_section_container {
+    padding: 5px 10px 0px 10px;
+    position: relative;
+    background-color: var(--primary_white);
+    margin-bottom: 4px;
+  }
 
-.lobby_section_container .section_games_lobby_container {
-  margin-left: -10px;
-  margin-right: -10px;
-  background: var(--primary_white);
-}
-.section_title_container .show_all_btn {
-  float: right;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background-color: var(--main_color);
-  display: flex;
-  justify-content: space-between;
-}
-.section_title_container {
-  border-bottom: none;
-  background-color: var(--primary_white);
-  color: var(--main_dark_gray);
-  padding: 4px 4px;
-}
-.lobby_section_container {
-  padding: 5px 10px 0px 10px;
-  position: relative;
-  background-color: var(--primary_white);
-  margin-bottom: 4px;
-}
+  .games_item_tag {
+    font-size: 12px !important;
+    padding: 1px !important;
+  }
 
-.games_item_tag {
-  font-size: 12px !important;
-  padding: 1px !important;
-}
+  .providers_container_dropdown .providers_btn_dropdown {
+    background: var(--main_color);
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
 
-.providers_container_dropdown .providers_btn_dropdown {
-  background: var(--main_color);
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 12px;
-}
-
-.providers_container_dropdown .providers_btn_dropdown:after {
-  content: "\f063";
-  font-family: "FontAwesome";
-  margin-left: 6px;
-}
-}
-
-#fe_body .scroll_up_btn.btn_general {
-  margin: 16px 0px;
-  background: var(--main_color);
-  height: 40px;
-  color: transparent;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-}
-
-#fe_body .scroll_up_btn.btn_general::after {
-  content: "\f062";
-  font-family: "FontAwesome";
-  font-size: 14px;
-  color: var(--primary_white);
-  margin-right: 8px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#fe_body .scroll_up_btn.btn_general::before {
-  content: "Voltar para o início";
-  display: block;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: none;
+  .providers_container_dropdown .providers_btn_dropdown:after {
+    content: "\f063";
+    font-family: "FontAwesome";
+    margin-left: 6px;
+  }
 }
 
 /*Registro*/
-.registration-page {
-.registration_container {
-  margin: 0px;
-}
-  
-  #fe_main:not(:has(.digitain_outer_wrapper)) .reg_v11 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):disabled, select:disabled, textarea:disabled, #fe_main:not(:has(.digitain_outer_wrapper)) .reg_v11 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):read-only {
-    background: var(--secondary_white)
+#fe_body.registration-page {
+  .registration_container {
+    margin: 0px;
   }
 
-        #fe_main button.reg_btn {
-          border-radius: 8px;
-          background: var(--primary_color)
-      }
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    .reg_v11
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]):disabled,
+  select:disabled,
+  textarea:disabled,
+  #fe_main:not(:has(.digitain_outer_wrapper))
+    .reg_v11
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+      [type="button"]
+    ):not([type="reset"]):not([type="file"]):read-only {
+    background: var(--secondary_white);
+  }
 
-    #fe_main button.reg_btn:hover {
-        opacity: 0.7;
-        background: var(--primary_color)
-    }
+  #fe_main button.reg_btn {
+    border-radius: 8px;
+    background: var(--primary_color);
+  }
 
-    .registration_tbl td.reg_field_button.submit_button_area {
-        padding: 0px 20px;
-    }
+  #fe_main button.reg_btn:hover {
+    opacity: 0.7;
+    background: var(--primary_color);
+  }
 
-      .chk_bx_cnt, .chk_bx a, .chk_bx div {
-        color: var(--main_dark_gray);
-    }
+  .registration_tbl td.reg_field_button.submit_button_area {
+    padding: 0px 20px;
+  }
+
+  .chk_bx_cnt,
+  .chk_bx a,
+  .chk_bx div {
+    color: var(--main_dark_gray);
+  }
 
   .checkmark2 {
-        border-radius: 4px;
-        border: 1px solid var(--primary_color);
-        background: var(--primary_white);
-        display: flex;
-        justify-content: center;
-    }
+    border-radius: 4px;
+    border: 1px solid var(--primary_color);
+    background: var(--primary_white);
+    display: flex;
+    justify-content: center;
+  }
 
   .checkmark2:before {
-        content: '\f00c';
-        font-family: "FontAwesome";
-        font-size: 14px;
-        color: white;
-    }
+    content: "\f00c";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    color: white;
+  }
+}
+
+#fe_body.forgot-password {
+  .panel_title_bar p {
+    color: var(--main_color) !important;
+  }
+
+  input {
+    background: var(--secondary_white) !important;
+    border-radius: 8px !important;
+  }
+
+  .bs_search_form_wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input_fld {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4px;
+  }
+  .txt_anim + label {
+    position: initial;
+    color: var(--main_black);
+  }
+}
+
+/* Hidden */
+#fe_body {
+  .swiper-slide img,
+  .providers_filter .providers_menu ul li a span.total_games_count,
+  .registration_tbl tr:nth-child(5),
+  .registration_tbl tr:nth-child(6),
+  .sportsbook_menu,
+  .sportsbook_days_filtering,
+  .influencers_container,
+  .footer_payments:after,
+  .sportsbook_container .sportsbook_events .spn_odds_section .spn_more_options,
+  .single_ev_btc_wrapper.event_filter.show a:first-child span,
+  .footer_links_sec:before,
+  #fe_footer .age_rest,
+  #sports_odds
+    > div
+    > div.sports_scroll_single_event
+    > div
+    > div.single_event_odds
+    > div
+    > div.bet_types_cols_holder
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.sr-bb.sr-cb-main-content.sr-ltr
+    > div
+    > div.sr-cb-main-content__wrapper.srt-neutral-13.srct-cb-container
+    > div
+    > div:nth-child(2)
+    > div
+    > div
+    > div.sr-cb-market-view__wrapper.sr-bb.sr-cb-tabs--is-capitalized
+    > div.sr-cb-market-view__bet-builder
+    > div
+    > div
+    > div
+    > div.sr-cb-betbuilder-animate__wrapper.srm-slide-up.srm-is-animating
+    > div
+    > div.sr-cb-betbuilder-animate__button
+    > div
+    > div
+    > div,
+  #bslip_content .slip_tabs,
+  .clear_bslip a span,
+  #bslip_content .bslip_selection_tbl tr.spacer,
+  #bslip_info_area table tbody tr:nth-child(4) td:nth-child(1) span,
+  .login_area_header .right_sec,
+  .deposit-lobby-page .payment_method_list li a img,
+  .withdraw-lobby-page .payment_method_list li a img,
+  .payment_method_list li a span,
+  #bslip_content td.slip_sel_col_odd span.yellow #text,
+  #sports_menu_item_113 .cat_name span,
+  .login_option_switch_text,
+  .sportsbook_navigation .navigation_block.nav-chat,
+  #fe_main .registration_container p.password_tooltip,
+  .message_content_tbl .header,
+  .message_content_tbl .date,
+  .message_content_tbl tbody tr:nth-child(3) td:nth-child(1) {
+    display: none;
+  }
 }
