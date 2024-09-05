@@ -3018,6 +3018,12 @@ div.vgood_checked_icon:after {
     border: none;
   }
 
+  .registration_tbl .chk_bx {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
   .registration_tbl td {
     padding: 4px;
   }
@@ -3052,13 +3058,8 @@ div.vgood_checked_icon:after {
     background: var(--primary_white);
     display: flex;
     justify-content: center;
-  }
-
-  .checkmark2:before {
-    content: "\f00c";
-    font-family: "FontAwesome";
-    font-size: 14px;
-    color: white;
+    box-shadow: none;
+    width: 24px !important;
   }
 
   .chk_bx_cnt input:checked ~ .checkmark2 {
