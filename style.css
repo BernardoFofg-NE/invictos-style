@@ -156,6 +156,10 @@
     padding: 0px 30px;
   }
 
+  #fe_login_box_popup .login_field_holder .icon_eye:after {
+    right: 50px;
+  }
+
   #fe_login_box_popup .login_field_holder .forgot_pass_link {
     text-decoration: none;
     float: right;
@@ -3026,6 +3030,10 @@ div.vgood_checked_icon:after {
 
   .registration_tbl td {
     padding: 4px;
+  }
+
+  .icon_eye:after {
+    right: 10px;
   }
 
   .registration_tbl span.reg_ttl2 {

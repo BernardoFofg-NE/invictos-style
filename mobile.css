@@ -246,7 +246,7 @@
     width: 16px;
     height: 24px;
     top: 9px;
-    left: 4px;
+    left: 8px;
     mask-size: 24px;
   }
 
@@ -3750,10 +3750,23 @@
   .registration_container {
     margin: 0px;
   }
+  
+    span.dt_icon:before {
+    top: 22px;
+    left: 12px;
+  }
+  
+  #reg_user_form .registration_tbl td {
+    color: var(--main_black);
+  }
 
   #reg_user_form .registration_tbl {
     background: var(--primary_white);
     padding: 16px 8px;
+  }
+
+  #reg_user_form .registration_tbl tr:first-child td table tbody tr:first-child {
+    display: none !important;!i;!;
   }
 
   .registration_tbl table {
@@ -3762,6 +3775,11 @@
 
   .registration_tbl .chk_bx {
     padding-left: 8px;
+  }
+
+  .registration_tbl span.reg_ttl2 {
+    color: var(--main_dark_color);
+    padding: 0px;
   }
 
   #fe_main:not(:has(.digitain_outer_wrapper))
@@ -3781,12 +3799,13 @@
 
   #fe_main button.reg_btn {
     border-radius: 8px;
-    background: var(--primary_color);
+    background: var(--main_color);
+    font-weight: bold;
   }
 
   #fe_main button.reg_btn:hover {
     opacity: 0.7;
-    background: var(--primary_color);
+    background: var(--main_color);
   }
 
   .registration_tbl td.reg_field_button.submit_button_area {
@@ -3797,21 +3816,6 @@
   .chk_bx a,
   .chk_bx div {
     color: var(--main_dark_gray);
-  }
-
-  .checkmark2 {
-    border-radius: 4px;
-    border: 1px solid var(--primary_color);
-    background: var(--primary_white);
-    display: flex;
-    justify-content: center;
-  }
-
-  .checkmark2:before {
-    content: "\f00c";
-    font-family: "FontAwesome";
-    font-size: 14px;
-    color: white;
   }
 }
 
