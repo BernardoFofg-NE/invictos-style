@@ -73,7 +73,6 @@
 }
 
 /* Global*/
-#fe_body {
   #fe_header {
     background: var(--main_color);
     height: 61px;
@@ -3358,17 +3357,7 @@
   .left_menu_area_inner .main_menu {
     height: auto;
   }
-}
 
-/* Responsive */
-@media only screen and (max-width: 375px) {
-  .mob_header.logged-out .clear {
-    display: none;
-  }
-  .mob_header.logged-out {
-    gap: 2px;
-  }
-}
 
 /* Página de Promoção */
 #fe_body.promotions-main-page {
@@ -3750,12 +3739,12 @@
   .registration_container {
     margin: 0px;
   }
-  
-    span.dt_icon:before {
+
+  span.dt_icon:before {
     top: 22px;
     left: 12px;
   }
-  
+
   #reg_user_form .registration_tbl td {
     color: var(--main_black);
   }
@@ -3765,8 +3754,14 @@
     padding: 16px 8px;
   }
 
-  #reg_user_form .registration_tbl tr:first-child td table tbody tr:first-child {
-    display: none !important;!i;!;
+  #reg_user_form
+    .registration_tbl
+    tr:first-child
+    td
+    table
+    tbody
+    tr:first-child {
+    display: none !important;
   }
 
   .registration_tbl table {
@@ -3907,5 +3902,15 @@
   .message_content_tbl .date,
   .message_content_tbl tbody tr:nth-child(3) td:nth-child(1) {
     display: none;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 375px) {
+  .mob_header.logged-out .clear {
+    display: none;
+  }
+  .mob_header.logged-out {
+    gap: 2px;
   }
 }
